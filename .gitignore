@@ -1,0 +1,13 @@
+# Ignore trained model artifacts
+trained_model/
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Environment files
+*.env
+.env
+
+# Notebook checkpoints
+.ipynb_checkpoints/
