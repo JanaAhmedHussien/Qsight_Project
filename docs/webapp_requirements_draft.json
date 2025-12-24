@@ -1,0 +1,73 @@
+{
+  "patient_profile": {
+    "name": "string",
+    "age": "integer",
+    "sex": "enum[Male,Female,Other]",
+    "metrics": {
+      "weight_kg": "float",
+      "height_cm": "float",
+      "bmi": "float (computed)"
+    },
+    "comorbidities": {
+      "obesity": "boolean",
+      "insulin": "boolean",
+      "smoking": "boolean",
+      "alcohol": "boolean",
+      "vascular_disease": "boolean"
+    }
+  },
+  "retinal_images": {
+    "left_eye_path": "string",
+    "right_eye_path": "string",
+    "preprocessing": {
+      "resize": [
+        224,
+        224
+      ],
+      "channels": 3
+    }
+  },
+  "inference": {
+    "mode": "enum[batched,separate]",
+    "batch_config": {
+      "batch_size": 2,
+      "height": 224,
+      "width": 224,
+      "channels": 3
+    },
+    "api_endpoint": "string"
+  },
+  "outputs": {
+    "diagnosis_json": {
+      "file_name": "diagnosis_metadata.json",
+      "fields": {
+        "patient_id": "string",
+        "timestamp": "ISO8601",
+        "model_version": "string",
+        "diagnosis": "enum[No_DR,Mild,Moderate,Severe,Proliferate_DR]",
+        "confidence": "float",
+        "additional_notes": "string",
+        "metadata": {
+          "left_eye_score": "float",
+          "right_eye_score": "float",
+          "inference_mode": "string",
+          "processing_time_sec": "float"
+        }
+      }
+    },
+    "pdf_report": {
+      "template": "procedural",
+      "llm_assisted": true,
+      "sections": [
+        "patient_profile_summary",
+        "image_analysis",
+        "model_results",
+        "recommendations"
+      ]
+    }
+  },
+  "audit_log": {
+    "enabled": true,
+    "storage_path": "logs/webapp_audit.log"
+  }
+}

@@ -1,0 +1,22 @@
+name: qml-qiskit
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - numpy>=1.24
+  - pandas>=2.0
+  - pillow>=9.4
+  - matplotlib>=3.8
+  - tqdm>=4.66
+  - scikit-learn>=1.3
+  - pytorch>=2.1
+  - torchvision>=0.16
+  - ipykernel>=6.26
+  - pip
+  - pip:
+      - kagglehub>=0.2
+      - qiskit>=1.0
+      - qiskit-machine-learning>=0.7
+ 

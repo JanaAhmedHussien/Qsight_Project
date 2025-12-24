@@ -85,3 +85,14 @@ This project is currently in the planning phase for a hackathon. We welcome:
 - Feedback on our technical approach
 - Suggestions for quantum optimization techniques
 - Ideas for clinical validation metrics
+<<<<<<< HEAD
+=======
+
+##  **One-Click Deployment**
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the application
+streamlit run streamlit_app.py
+>>>>>>> e8965847b47e71bd9b0e7919d7ddc8488ad65081
