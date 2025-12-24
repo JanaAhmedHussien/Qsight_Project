@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Diabetic Retinopathy Screening</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👁️</text></svg>">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button id="themeToggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </button>
+    </div>
+
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fas fa-eye"></i>
+                    <span>RetinaScan<span class="logo-highlight">AI</span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#upload">Upload</a></li>
+                    <li><a href="#analysis">Analysis</a></li>
+                    <li><a href="#results">Results</a></li>
+                    <li><a href="#xai">XAI</a></li>
+                    <li><a href="#report">Report</a></li>
+                </ul>
+                <button class="menu-toggle" aria-label="Menu toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Landing Section -->
+        <section class="landing-section" id="landing">
+            <div class="container">
+                <div class="landing-content">
+                    <h1 class="landing-title">AI-Powered Diabetic Retinopathy Screening</h1>
+                    <p class="landing-subtitle">Quantum Machine Learning • Segmentation • Explainable AI</p>
+                    <p class="landing-description">
+                        A cutting-edge diagnostic tool that leverages Quantum Neural Networks for precise detection of diabetic retinopathy from retinal fundus images. Get instant screening results with explainable AI insights.
+                    </p>
+                    <div class="landing-cta">
+                        <button class="btn btn-primary" id="startUploadBtn">
+                            <i class="fas fa-cloud-upload-alt"></i> Upload Retina Image
+                        </button>
+                        <button class="btn btn-secondary" id="learnMoreBtn">
+                            <i class="fas fa-play-circle"></i> How It Works
+                        </button>
+                    </div>
+                    <div class="landing-stats">
+                        <div class="stat">
+                            <span class="stat-number">99.2%</span>
+                            <span class="stat-label">Accuracy</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5.7s</span>
+                            <span class="stat-label">Avg. Analysis Time</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10K+</span>
+                            <span class="stat-label">Images Analyzed</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="landing-visual">
+                    <div class="retina-visual">
+                        <div class="eye-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="visual-wave"></div>
+                        <div class="visual-wave delay-1"></div>
+                        <div class="visual-wave delay-2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Upload Section -->
+        <section class="upload-section" id="upload">
+            <div class="container">
+                <h2 class="section-title">Upload Retinal Image</h2>
+                <p class="section-subtitle">Upload a fundus image for analysis. Supported formats: JPG, JPEG, PNG</p>
+                
+                <div class="upload-container">
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <h3 class="upload-title">Drag & Drop Your Image</h3>
+                        <p class="upload-subtitle">or click to browse files</p>
+                        <input type="file" id="imageInput" accept=".jpg,.jpeg,.png" hidden>
+                        <button class="btn btn-outline" id="browseBtn">Browse Files</button>
+                        <p class="upload-note">Maximum file size: 10MB</p>
+                    </div>
+                    
+                    <div class="preview-container" id="previewContainer">
+                        <h3 class="preview-title">Image Preview</h3>
+                        <div class="preview-wrapper">
+                            <div class="preview-placeholder" id="previewPlaceholder">
+                                <i class="fas fa-image"></i>
+                                <p>No image selected</p>
+                            </div>
+                            <img class="preview-image" id="previewImage" src="" alt="Retinal image preview">
+                        </div>
+                        <div class="file-info" id="fileInfo">
+                            <p><strong>File Name:</strong> <span id="fileName">-</span></p>
+                            <p><strong>File Size:</strong> <span id="fileSize">-</span></p>
+                            <p><strong>Dimensions:</strong> <span id="fileDimensions">-</span></p>
+                        </div>
+                        <div class="preview-actions">
+                            <button class="btn btn-small btn-danger" id="removeImageBtn">
+                                <i class="fas fa-trash"></i> Remove
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="error-message" id="errorMessage"></div>
+            </div>
+        </section>
+
+        <!-- Analysis Control Panel -->
+        <section class="analysis-section" id="analysis">
+            <div class="container">
+                <h2 class="section-title">Analysis Control Panel</h2>
+                <p class="section-subtitle">Control the analysis process and manage images</p>
+                
+                <div class="control-panel">
+                    <div class="control-buttons">
+                        <button class="btn btn-primary" id="analyzeBtn">
+                            <i class="fas fa-play-circle"></i> Analyze Image
+                        </button>
+                        <button class="btn btn-secondary" id="resetBtn">
+                            <i class="fas fa-redo"></i> Reset
+                        </button>
+                        <button class="btn btn-outline" id="sampleBtn">
+                            <i class="fas fa-download"></i> Download Sample Image
+                        </button>
+                    </div>
+                    
+                    <div class="progress-section" id="progressSection">
+                        <div class="progress-header">
+                            <h4>Analysis Progress</h4>
+                            <span id="progressPercent">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <div class="progress-steps">
+                            <div class="step active">
+                                <div class="step-dot"></div>
+                                <span class="step-label">Upload</span>
+                            </div>
+                            <div class="step">
+                                <div class="step-dot"></div>
+                                <span class="step-label">Quantum ML</span>
+                            </div>
+                            <div class="step">
+                                <div class="step-dot"></div>
+                                <span class="step-label">Segmentation</span>
+                            </div>
+                            <div class="step">
+                                <div class="step-dot"></div>
+                                <span class="step-label">XAI Analysis</span>
+                            </div>
+                            <div class="step">
+                                <div class="step-dot"></div>
+                                <span class="step-label">Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="loading-container" id="loadingContainer">
+                        <div class="loading-spinner">
+                            <div class="spinner"></div>
+                            <p>Analyzing with Quantum ML...</p>
+                            <p class="loading-detail" id="loadingDetail">Initializing quantum circuit...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-section" id="results">
+            <div class="container">
+                <h2 class="section-title">Analysis Results</h2>
+                <p class="section-subtitle">Comprehensive screening results with detailed insights</p>
+                
+                <div class="results-container" id="resultsContainer">
+                    <!-- Results will be dynamically inserted here -->
+                    <div class="no-results" id="noResults">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Analysis Results Will Appear Here</h3>
+                        <p>Upload and analyze a retinal image to see the results</p>
+                    </div>
+                </div>
+                <!-- Template for results (hidden by default) -->
+                <div class="results-template" id="resultsTemplate" hidden>
+                    <div class="classification-result">
+                        <div class="result-header">
+                            <h3>Classification Result</h3>
+                            <div class="result-badge" id="resultBadge">
+                                <span class="badge-label">No Diabetic Retinopathy</span>
+                                <span class="badge-confidence">Confidence: 92.5%</span>
+                            </div>
+                        </div>
+                        <div class="confidence-score">
+                            <div class="score-header">
+                                <h4>Confidence Score</h4>
+                                <span id="confidenceValue">92.5%</span>
+                            </div>
+                            <div class="score-meter">
+                                <div class="meter-fill" id="meterFill"></div>
+                            </div>
+                            <div class="score-labels">
+                                <span>Low</span>
+                                <span>Medium</span>
+                                <span>High</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-quantum"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Quantum Machine Learning Analysis</h4>
+                                <p>Prediction generated using Quantum Neural Network (QNN) with Variational Quantum Circuit (VQC) architecture. This hybrid quantum-classical approach enhances pattern recognition in retinal images.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="segmentation-visualization">
+                        <div class="segmentation-header">
+                            <h3>Segmentation Visualization</h3>
+                            <div class="opacity-control">
+                                <label for="opacitySlider">Overlay Opacity: <span id="opacityValue">50</span>%</label>
+                                <input type="range" id="opacitySlider" min="0" max="100" value="50">
+                            </div>
+                        </div>
+                        <div class="segmentation-panels">
+                            <div class="panel">
+                                <h4>Original Retina Image</h4>
+                                <div class="panel-image">
+                                    <!-- TODO: Load actual retina image from backend -->
+                                    <div class="image-placeholder" id="originalImagePlaceholder">
+                                        <i class="fas fa-image"></i>
+                                        <p>Original image will appear here</p>
+                                    </div>
+                                    <img id="originalImage" src="" alt="Original retinal image">
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <h4>Segmented Output</h4>
+                                <div class="panel-image">
+                                    <!-- TODO: Load segmentation mask from backend -->
+                                    <div class="image-placeholder" id="segmentedImagePlaceholder">
+                                        <i class="fas fa-object-group"></i>
+                                        <p>Segmentation overlay will appear here</p>
+                                    </div>
+                                    <img id="segmentedImage" src="" alt="Segmented retinal image">
+                                    <div class="segmentation-overlay" id="segmentationOverlay"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="segmentation-legend">
+                            <h4>Detected Lesions</h4>
+                            <div class="legend-items">
+                                <div class="legend-item">
+                                    <div class="legend-color microaneurysms"></div>
+                                    <span>Microaneurysms</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color hemorrhages"></div>
+                                    <span>Hemorrhages</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color exudates"></div>
+                                    <span>Hard Exudates</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color cotton-wool"></div>
+                                    <span>Cotton Wool Spots</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Explainable AI (XAI) Section -->
+        <section class="xai-section" id="xai">
+            <div class="container">
+                <h2 class="section-title">Explainable AI (XAI) Insights</h2>
+                <p class="section-subtitle">Understand how our AI model makes predictions</p>
+                
+                <div class="xai-tabs" id="xaiTabs">
+                    <div class="tab-header">
+                        <button class="tab-btn active" data-tab="gradcam">
+                            <i class="fas fa-fire"></i> Grad-CAM
+                        </button>
+                        <button class="tab-btn" data-tab="saliency">
+                            <i class="fas fa-map"></i> Saliency Map
+                        </button>
+                        <button class="tab-btn" data-tab="feature">
+                            <i class="fas fa-chart-bar"></i> Feature Importance
+                        </button>
+                    </div>
+                    
+                    <div class="tab-content active" id="gradcam">
+                        <div class="xai-visual">
+                            <div class="heatmap-placeholder" id="gradcamPlaceholder">
+                                <div class="heatmap-overlay">
+                                    <div class="heatmap-grid"></div>
+                                </div>
+                                <div class="xai-image">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                            </div>
+                            <div class="xai-explanation">
+                                <h4>Gradient-weighted Class Activation Mapping (Grad-CAM)</h4>
+                                <p>This visualization highlights regions of the retinal image that were most influential in the model's prediction. Warmer colors indicate higher importance.</p>
+                                <ul class="xai-details">
+                                    <li><strong>Model Layer:</strong> Final convolutional layer of ResNet-50</li>
+                                    <li><strong>Resolution:</strong> 224×224 pixels</li>
+                                    <li><strong>Key Insight:</strong> Model focuses on microvascular changes in the temporal region</li>
+                                </ul>
+                                <div class="xai-note">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <p>Grad-CAM helps clinicians verify that the model is focusing on medically relevant features rather than artifacts.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="saliency">
+                        <div class="xai-visual">
+                            <div class="heatmap-placeholder" id="saliencyPlaceholder">
+                                <div class="heatmap-overlay saliency">
+                                    <div class="heatmap-grid"></div>
+                                </div>
+                                <div class="xai-image">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                            </div>
+                            <div class="xai-explanation">
+                                <h4>Saliency Map</h4>
+                                <p>This map shows pixel-wise importance by computing gradients of the output with respect to the input image. Brighter areas contributed more to the classification decision.</p>
+                                <ul class="xai-details">
+                                    <li><strong>Method:</strong> Vanilla Gradient backpropagation</li>
+                                    <li><strong>Granularity:</strong> Pixel-level attribution</li>
+                                    <li><strong>Key Insight:</strong> Strong focus on vascular junctions and optic disc boundaries</li>
+                                </ul>
+                                <div class="xai-note">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <p>Saliency maps are particularly useful for identifying which specific image features trigger the model's detection of pathologies.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="feature">
+                        <div class="xai-visual">
+                            <div class="feature-importance" id="featureImportance">
+                                <div class="feature-chart">
+                                    <div class="chart-bar" style="height: 85%;" data-value="85">
+                                        <span>Vascular Features</span>
+                                    </div>
+                                    <div class="chart-bar" style="height: 72%;" data-value="72">
+                                        <span>Lesion Density</span>
+                                    </div>
+                                    <div class="chart-bar" style="height: 63%;" data-value="63">
+                                        <span>Optic Disc</span>
+                                    </div>
+                                    <div class="chart-bar" style="height: 58%;" data-value="58">
+                                        <span>Macular Region</span>
+                                    </div>
+                                    <div class="chart-bar" style="height: 41%;" data-value="41">
+                                        <span>Texture Patterns</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="xai-explanation">
+                                <h4>Feature Importance Analysis</h4>
+                                <p>This chart shows the relative importance of different feature categories in the model's decision-making process, as determined by SHAP (SHapley Additive exPlanations) values.</p>
+                                <ul class="xai-details">
+                                    <li><strong>Method:</strong> SHAP (Tree Explainer)</li>
+                                    <li><strong>Top Feature:</strong> Vascular tortuosity and branching patterns</li>
+                                    <li><strong>Interpretation:</strong> Model places highest importance on microvascular abnormalities</li>
+                                </ul>
+                                <div class="xai-note">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <p>Feature importance analysis helps validate that the model prioritizes clinically established biomarkers of diabetic retinopathy.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Medical Report & Email Section -->
+        <section class="report-section" id="report">
+            <div class="container">
+                <h2 class="section-title">Medical Report & Email</h2>
+                <p class="section-subtitle">Generate and share the screening report with patients</p>
+                
+                <div class="report-container">
+                    <div class="report-preview">
+                        <div class="report-header">
+                            <div class="report-logo">
+                                <i class="fas fa-hospital"></i>
+                                <span>RetinaScan<span class="logo-highlight">AI</span> Medical Report</span>
+                            </div>
+                            <div class="report-date" id="reportDate">November 15, 2023</div>
+                        </div>
+                        
+                        <div class="report-body">
+                            <div class="report-section">
+                                <h4>Patient Information</h4>
+                                <div class="info-grid">
+                                    <div class="info-item">
+                                        <span class="info-label">Patient ID:</span>
+                                        <span class="info-value" id="patientId">PT-2023-00142</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Age:</span>
+                                        <span class="info-value" id="patientAge">54</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Gender:</span>
+                                        <span class="info-value" id="patientGender">Male</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">Date of Screening:</span>
+                                        <span class="info-value" id="screeningDate">November 15, 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="report-section">
+                                <h4>Screening Results</h4>
+                                <div class="diagnosis-result">
+                                    <div class="diagnosis-header">
+                                        <span class="diagnosis-label">Diagnosis:</span>
+                                        <div class="diagnosis-badge" id="reportDiagnosis">
+                                            <span class="badge-label">No Diabetic Retinopathy</span>
+                                            <span class="badge-confidence">Confidence: 92.5%</span>
+                                        </div>
+                                    </div>
+                                    <div class="diagnosis-details">
+                                        <p>No signs of diabetic retinopathy detected. Retinal vasculature appears within normal limits. No microaneurysms, hemorrhages, or exudates identified.</p>
+                                        <p>Recommendation: Continue annual screening as per standard diabetic eye care guidelines.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="report-section">
+                                <h4>Clinical Notes</h4>
+                                <div class="clinical-notes">
+                                    <p>This screening result is based on AI analysis of the submitted fundus image. The analysis utilized Quantum Machine Learning algorithms for enhanced detection accuracy.</p>
+                                    <p><strong>Important:</strong> This AI screening is not a substitute for a comprehensive dilated eye examination by an ophthalmologist. Patients with diabetes should have annual comprehensive eye exams.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="report-footer">
+                                <div class="footer-note">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <span>Report generated by AI. For clinical use, this report must be reviewed and validated by a qualified ophthalmologist.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="email-send">
+                        <h3>Send Report via Email</h3>
+                        <p>Enter the patient's email address to send this report.</p>
+                        
+                        <div class="email-form">
+                            <div class="form-group">
+                                <label for="emailInput">Patient Email Address</label>
+                                <input type="email" id="emailInput" placeholder="patient@example.com">
+                                <div class="error-text" id="emailError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="additionalNotes">Additional Notes (Optional)</label>
+                                <textarea id="additionalNotes" rows="3" placeholder="Add any additional notes or instructions for the patient..."></textarea>
+                            </div>
+                            
+                            <button class="btn btn-primary btn-block" id="sendReportBtn">
+                                <i class="fas fa-paper-plane"></i> Send Report to Email
+                            </button>
+                        </div>
+                        
+                        <div class="email-note">
+                            <i class="fas fa-info-circle"></i>
+                            <p>This is a demo interface. In a production system, this would connect to a secure healthcare email service with HIPAA compliance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Toast Notification -->
+        <div class="toast-container" id="toastContainer"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-eye"></i>
+                        <span>RetinaScan<span class="logo-highlight">AI</span></span>
+                    </div>
+                    <p class="footer-description">
+                        An advanced AI screening tool for early detection of diabetic retinopathy, leveraging Quantum Machine Learning and Explainable AI.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Technologies</h4>
+                    <ul class="footer-links">
+                        <li>Quantum Machine Learning</li>
+                        <li>Deep Learning (CNN)</li>
+                        <li>Explainable AI (XAI)</li>
+                        <li>Image Segmentation</li>
+                        <li>Medical Image Analysis</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Medical Disclaimer</h4>
+                    <div class="disclaimer">
+                        <p>This tool is for screening purposes only and is not a substitute for professional medical diagnosis. All results should be reviewed by a qualified ophthalmologist. The system is intended to assist healthcare professionals, not replace them.</p>
+                        <p>Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 RetinaScanAI. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+                <p class="footer-note">This is a UI demonstration prototype. Backend AI integration is under development.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
