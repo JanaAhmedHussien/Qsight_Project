@@ -1,0 +1,26 @@
+{
+  "patient_info": {
+    "id": 5,
+    "age": 45,
+    "sex": "M",
+    "bmi": 24.489795918367346
+  },
+  "risk_factors": {
+    "insulin": 12.5,
+    "smoker": false,
+    "alcohol": "Low",
+    "vascular": false
+  },
+  "image_info": {
+    "left_eye": "left.jpg",
+    "right_eye": "right.jpg",
+    "resolution": "224x224"
+  },
+  "diagnosis": {
+    "stage": "Mild",
+    "confidence": 85.5,
+    "risk_score": 4.0
+  },
+  "llm_summary": "Mild diabetic retinopathy detected with 85.5% confidence. Consult an ophthalmologist.",
+  "timestamp": "2025-12-26T19:23:37.255619"
+}

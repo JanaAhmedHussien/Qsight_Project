@@ -1,0 +1,17 @@
+{
+  "patient": {
+    "id": 9,
+    "age": 45,
+    "sex": "M",
+    "bmi": 24.49
+  },
+  "diagnosis": {
+    "retinopathy": "Mild",
+    "confidence": 85.5,
+    "risk": 4.0,
+    "left_img": "L.jpg",
+    "right_img": "R.jpg",
+    "summary": "Imagine the back of your eye has a very delicate \"film,\" like in an old camera, called the **retina**. This retina is full of tiny blood vessels that bring it nutrients and oxygen.\n\n**Mild diabetic retinopathy** is the earliest stage of damage to these tiny blood vessels in the retina, caused by high blood sugar from diabetes.\n\nHere's what it means simply:\n\n1.  **Tiny Blood Vessels Weaken:** The high sugar levels in your blood over time can weaken the walls of these very small blood vessels in your retina.\n2.  **Small \"Bubbles\" Form:** Some of these weak spots can bulge out slightly, like tiny little balloons. These are called **microaneurysms**.\n3.  **Minor Leaks:** Sometimes, these weak spots or bulges might leak a tiny bit of fluid or blood.\n4.  **No Noticeable Symptoms (Usually):** Crucially, at this mild stage, the damage is usually minimal and doesn't affect the central part of your vision. This means you likely won't notice any changes in your eyesight, which is why regular dilated eye exams are so important.\n5.  **A Warning Sign:** It's like finding a few tiny cracks in a pipe; they're not causing a major flood yet, but they're a clear sign that the pipe is weakening and could get worse if not managed.\n\n**In short: Mild diabetic retinopathy means your eye doctor has found the very first, subtle signs of damage to the blood vessels in your retina because of your diabetes. You probably won't have any vision problems yet, but it's a clear signal to manage your diabetes carefully to prevent it from getting worse.**"
+  },
+  "time": "2025-12-26T20:04:27.639274"
+}

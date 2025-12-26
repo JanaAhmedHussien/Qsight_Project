@@ -1,0 +1,26 @@
+{
+  "patient_info": {
+    "id": 8,
+    "age": 45,
+    "sex": "M",
+    "bmi": 24.489795918367346
+  },
+  "risk_factors": {
+    "insulin": 12.5,
+    "smoker": false,
+    "alcohol": "Low",
+    "vascular": false
+  },
+  "image_info": {
+    "left_eye": "left.jpg",
+    "right_eye": "right.jpg",
+    "resolution": "224x224"
+  },
+  "diagnosis": {
+    "stage": "Mild",
+    "confidence": 85.5,
+    "risk_score": 4.0
+  },
+  "llm_summary": "Okay, let's talk about 'mild diabetic retinopathy.'\n\nThis basically means that your diabetes is beginning to affect a special part at the very back of your eye called the **retina**. Think of the retina as the film in a camera \u2013 it's what captures all the images you see and sends them to your brain.\n\nWhat we've observed are some very slight, initial alterations in the small blood vessels within this seeing layer of your eye. The key word here is 'mild,' indicating these are early signs, not severe damage. This is a common complication for people with diabetes, and identifying it at this stage is really positive because it means we can act now to help safeguard your vision. We're quite confident in this assessment, which gives us a clear path forward.\n\nFor a practical step you can take, I strongly recommend focusing on consistent blood sugar management, perhaps by aiming to eat your meals at regular times each day. This can help prevent those blood sugar spikes that contribute to eye changes.",
+  "timestamp": "2025-12-26T19:54:14.408601"
+}
