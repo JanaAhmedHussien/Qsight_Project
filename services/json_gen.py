@@ -1,13 +1,44 @@
-import json, config
+import json
 from datetime import datetime
+import config
 
 class JSONGen:
-    def create(self, p, d):
-        path = config.Config.JSON / f"diag_{p.id}.json"
+    def create(self, patient, diag):
+        path = config.Config.JSON / f"diagnosis_{patient.id}.json"
+
+        data = {
+            "metadata": {
+                "system": "QSight",
+                "version": "1.0",
+                "generated_at": datetime.utcnow().isoformat()
+            },
+            "patient_info": {
+                "id": patient.id,
+                "name": patient.name,
+                "age": patient.age,
+                "sex": patient.sex,
+                "bmi": patient.bmi,
+                "vascular_risk": patient.vascular
+            },
+            "image_info": {
+                "left_eye": diag["left_img"],
+                "right_eye": diag["right_img"],
+                "resolution": "224x224"
+            },
+            "model_info": {
+                "model": "DR-CNN",
+                "framework": "PyTorch",
+                "task": "Diabetic Retinopathy Classification"
+            },
+            "diagnosis_info": {
+                "stage": diag["retinopathy"],
+                "confidence": diag["confidence"],
+                "risk_score": diag["risk"]
+            },
+            "llm_narrative_summary": diag["summary"]
+        }
+
         with open(path, "w") as f:
-            json.dump({
-                "patient": {"id": p.id, "age": p.age, "sex": p.sex, "bmi": p.bmi},
-                "diagnosis": d,
-                "time": datetime.utcnow().isoformat()
-            }, f, indent=2)
+            json.dump(data, f, indent=2)
+
         return str(path)

@@ -5,20 +5,36 @@ from datetime import datetime
 import config
 
 class PDFGen:
-    def create(self, p, d):
-        path = config.Config.REPORTS / f"report_{p.id}.pdf"
+    def create(self, patient, diag):
+        path = config.Config.REPORTS / f"report_{patient.id}.pdf"
 
         styles = getSampleStyleSheet()
         doc = SimpleDocTemplate(str(path), pagesize=letter)
 
-        doc.build([
+        content = [
             Paragraph("QSight Retinal Diagnosis Report", styles["Title"]),
             Paragraph(f"Generated: {datetime.utcnow()}", styles["Normal"]),
-            Paragraph(f"Patient ID: {p.id}", styles["Normal"]),
-            Paragraph(f"Diagnosis: {d['retinopathy']}", styles["Normal"]),
-            Paragraph(f"Confidence: {d['confidence']}%", styles["Normal"]),
-            Paragraph(d["summary"], styles["Normal"]),
-            Paragraph("AI-assisted report. Not a medical diagnosis.", styles["Italic"]),
-        ])
 
+            Paragraph("<b>1. Executive Summary</b>", styles["Heading2"]),
+            Paragraph(diag["summary"], styles["Normal"]),
+
+            Paragraph("<b>2. Patient Information</b>", styles["Heading2"]),
+            Paragraph(f"Patient ID: {patient.id}", styles["Normal"]),
+            Paragraph(f"Age / Sex: {patient.age} / {patient.sex}", styles["Normal"]),
+            Paragraph(f"BMI: {patient.bmi}", styles["Normal"]),
+
+            Paragraph("<b>3. Diagnosis Findings</b>", styles["Heading2"]),
+            Paragraph(f"Stage: {diag['retinopathy']}", styles["Normal"]),
+            Paragraph(f"Confidence: {diag['confidence']}%", styles["Normal"]),
+            Paragraph(f"Risk Score: {diag['risk']}", styles["Normal"]),
+
+            Paragraph("<b>4. Compliance Notice</b>", styles["Heading2"]),
+            Paragraph(
+                "This AI-generated report is intended for clinical decision support "
+                "and must be reviewed by a certified ophthalmologist.",
+                styles["Italic"]
+            ),
+        ]
+
+        doc.build(content)
         return str(path)
