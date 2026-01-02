@@ -23,42 +23,55 @@ class LLM:
         return {
             "role": "user",
             "content": f"""
-You are a healthcare AI assistant.
+    You are a board-certified ophthalmologist specializing in diabetic retinopathy.
+    Write a concise, clinical medical report.
 
-Return STRICT JSON only. No markdown. No explanations outside JSON.
+    IMPORTANT RULES:
+    - Return STRICT JSON only
+    - No markdown
+    - No filler phrases (e.g. "are recommended", "it is advised")
+    - Use short clinical bullet-style sentences
+    - Condense information; clarity over expressiveness
+    - Lifestyle guidance should be specific (diet focus, eye protection, glycemic control)
 
-Patient:
-Name: {patient.name}
-Age: {patient.age}
-Sex: {patient.sex}
-Weight: {patient.weight}
-Height: {patient.height}
-BMI: {patient.bmi}
-Insulin: {patient.insulin}
-Smoker: {patient.smoker}
-Alcohol: {patient.alcohol}
-Vascular Disease: {patient.vascular}
+    Patient:
+    Name: {patient.name}
+    Age: {patient.age}
+    Sex: {patient.sex}
+    Weight: {patient.weight}
+    Height: {patient.height}
+    BMI: {patient.bmi}
+    Insulin: {patient.insulin}
+    Smoker: {patient.smoker}
+    Alcohol: {patient.alcohol}
+    Vascular Disease: {patient.vascular}
 
-Diagnosis:
-Left Eye: {diag['retinopathy_left']}
-Right Eye: {diag['retinopathy_right']}
-Confidence: {diag['confidence']}
-Risk Score: {diag['risk']}
+    Diagnosis:
+    Left Eye: {diag['retinopathy_left']}
+    Right Eye: {diag['retinopathy_right']}
+    Confidence: {diag['confidence']}
+    Risk Score: {diag['risk']}
 
-JSON schema:
-{{
-  "condition_overview": "",
-  "patient_assessment": "",
-  "implications": "",
-  "treatment_plan": "",
-  "life_impact": "",
-  "financial_impact": "",
-  "recovery_projection": "",
-  "additional_assessments": "",
-  "compliance_notice": ""
-}}
-"""
+    JSON schema (concise, clinical tone):
+    {{
+    "condition_overview": "Brief definition and severity summary.",
+    "patient_assessment": "Key risk factors and clinical interpretation.",
+    "implications": "Potential visual and systemic consequences.",
+    "treatment_plan": "Outline format. Clinical interventions and monitoring.",
+    "life_impact": "Short bullet points. Daily vision and activity effects.",
+    "financial_impact": "Expected cost categories (monitoring, therapy).",
+    "recovery_projection": "Expected course with adherence.",
+    "additional_assessments": "Required tests or referrals.",
+    "compliance_notice": "Importance of follow-up and treatment adherence."
+    }}
+
+    Lifestyle guidance rules:
+    - Diet: specify focus (glycemic control, low saturated fat, antioxidants)
+    - Eye protection: UV protection explicitly stated
+    - Avoid narrative language
+    """
         }
+
 
     # ---------- ChatGPT ----------
     def _chatgpt(self, patient, diag):

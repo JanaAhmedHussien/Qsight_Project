@@ -2,7 +2,7 @@
   "metadata": {
     "system": "QSight",
     "version": "1.0",
-    "generated_at": "2026-01-02T13:25:52.005603"
+    "generated_at": "2026-01-02T22:17:02.514806"
   },
   "patient_info": {
     "id": 4,
@@ -23,9 +23,31 @@
     "task": "Diabetic Retinopathy Classification"
   },
   "diagnosis_info": {
-    "stage": "Mild",
+    "left_eye": "Mild",
+    "right_eye": "Mild",
     "confidence": 85.5,
     "risk_score": 4.0
   },
-  "llm_narrative_summary": "Mild diabetic retinopathy is the **earliest stage of eye damage caused by diabetes.**\n\nHere's a simple breakdown:\n\n1.  **Diabetes and Blood Vessels:** Over time, high blood sugar from diabetes can damage the tiny blood vessels all over your body, including those in your eyes.\n2.  **The Retina:** The retina is the light-sensing tissue at the back of your eye, like the film in a camera. It needs healthy blood vessels to work properly.\n3.  **\"Mild\" Stage:** At this early stage, the damage is very minor. The tiny blood vessels in your retina might start to weaken and develop small bulges (called microaneurysms) or leak tiny amounts of fluid.\n4.  **No Symptoms (Usually):** Most people with mild diabetic retinopathy don't notice any changes in their vision because the damage is so minimal and usually doesn't affect the central part of their vision.\n5.  **Warning Sign:** It's a warning that diabetes is starting to affect your eyes. It means you need to continue carefully managing your blood sugar, blood pressure, and cholesterol to prevent the condition from getting worse.\n\nIn short, it's a **small, early sign of diabetes-related eye changes that usually doesn't affect your vision yet, but requires monitoring.**"
+  "llm_report": {
+    "condition_overview": "Diabetic retinopathy: microvascular damage to retinal vessels from chronic hyperglycemia. Bilateral mild non-proliferative diabetic retinopathy (NPDR) diagnosed. No immediate vision-threatening features identified.",
+    "patient_assessment": "45-year-old male with mild bilateral NPDR. BMI 24.49 (normal). Non-smoker, low alcohol use. No vascular disease history. Glycemic control is a key factor influencing DR progression. Presence of DR indicates systemic microvascular disease.",
+    "implications": "Risk of progression to moderate/severe NPDR or proliferative DR (PDR). Risk of diabetic macular edema (DME), a leading cause of vision loss. Potential for retinal hemorrhage, neovascularization, vitreous hemorrhage, or retinal detachment with advanced disease. DR often correlates with systemic microvascular disease (e.g., nephropathy).",
+    "treatment_plan": {
+      "Systemic Management": [
+        "Strict glycemic control: Maintain HbA1c at individualized target.",
+        "Blood pressure control: Target <130/80 mmHg.",
+        "Lipid management: Achieve target LDL cholesterol levels.",
+        "Lifestyle modification: Regular physical activity, cessation of smoking."
+      ],
+      "Ophthalmic Management": [
+        "Regular dilated fundus examination and optical coherence tomography (OCT) every 6-12 months.",
+        "No immediate ophthalmologic intervention (e.g., laser, anti-VEGF) indicated for mild NPDR without DME."
+      ]
+    },
+    "life_impact": "Currently minimal impact on daily vision or activities. Requires adherence to frequent medical appointments. Requires strict dietary discipline focusing on glycemic control, low saturated fat intake, and antioxidant-rich foods. Requires consistent UV protective eyewear.",
+    "financial_impact": "Anticipate costs for regular ophthalmologic monitoring (fundus photography, OCT). Potential future costs for advanced treatments (e.g., anti-VEGF injections, laser photocoagulation, vitrectomy) if progression occurs. Ongoing systemic diabetes management costs (medications, endocrinologist visits, lab tests).",
+    "recovery_projection": "With strict glycemic, blood pressure, and lipid control, progression of DR can be slowed or halted. Vision preservation is the primary objective. Regression of DR is uncommon but possible with excellent metabolic control. Non-adherence increases risk of progression and irreversible vision loss.",
+    "additional_assessments": "Referral to endocrinology for optimal glycemic, blood pressure, and lipid management. Referral to primary care physician for comprehensive systemic health management. Baseline optical coherence tomography (OCT) of macula for future comparison. Baseline fundus photography for documentation.",
+    "compliance_notice": "Strict adherence to systemic medical management is critical for DR stability. Regular ophthalmic follow-up appointments are mandatory. Non-compliance risks irreversible vision loss."
+  }
 }
