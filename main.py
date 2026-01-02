@@ -8,38 +8,38 @@ llm = LLM()
 jg = JSONGen()
 pg = PDFGen()
 
-# CREATE PATIENT
-patient = db.create_patient({
-    "name": "Test Patient",
-    "age": 45,
-    "sex": "M",
-    "weight": 75,
-    "height": 175,
-    "insulin": 12,
-    "smoker": False,
-    "alcohol": "Low",
-    "vascular": False
-})
+def profile_builder(**kwargs):
+    return db.create_patient(kwargs)
 
-# DIAGNOSIS DATA
+patient = profile_builder(
+    name="Test Patient",
+    age=45,
+    sex="M",
+    weight=75,
+    height=175,
+    insulin=12,
+    smoker=False,
+    alcohol="Low",
+    vascular=False
+)
+
 diag = {
-    "retinopathy": "Mild",
+    "retinopathy_left": "Mild",
+    "retinopathy_right": "Mild",
     "confidence": 85.5,
     "risk": 4.0,
     "left_img": "left_eye.jpg",
     "right_img": "right_eye.jpg"
 }
 
-# LLM SUMMARY
-diag["summary"] = llm.summarize(diag)
+llm_output = llm.generate_report(patient, diag)
+diag["llm"] = llm_output
 
-# JSON + PDF
 diag["json_path"] = jg.create(patient, diag)
-diag["pdf_path"] = pg.create(patient, diag)
+diag["pdf_path"] = pg.create(patient, diag, llm_output)
 diag["patient_id"] = patient.id
 
-# SAVE DIAGNOSIS
 db.create_diagnosis(diag)
-
 db.close()
-print(" QSight pipeline executed successfully")
+
+print("QSight diagnosis report generated successfully")

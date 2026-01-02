@@ -27,7 +27,9 @@ class Diagnosis(Base):
     id = Column(Integer, primary_key=True)
     patient_id = Column(Integer, ForeignKey("patients.id"))
 
-    retinopathy = Column(String)
+    retinopathy_left = Column(String)
+    retinopathy_right = Column(String)
+
     confidence = Column(Float)
     risk = Column(Float)
 

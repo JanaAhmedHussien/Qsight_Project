@@ -31,12 +31,14 @@ class JSONGen:
                 "task": "Diabetic Retinopathy Classification"
             },
             "diagnosis_info": {
-                "stage": diag["retinopathy"],
+                "left_eye": diag["retinopathy_left"],
+                "right_eye": diag["retinopathy_right"],
                 "confidence": diag["confidence"],
                 "risk_score": diag["risk"]
             },
-            "llm_narrative_summary": diag["summary"]
-        }
+            "llm_report": diag["llm"]
+
+                    }
 
         with open(path, "w") as f:
             json.dump(data, f, indent=2)

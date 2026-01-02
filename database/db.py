@@ -23,11 +23,27 @@ class DB:
         return p
 
     def create_diagnosis(self, data):
-        d = Diagnosis(**data)
+        allowed = {
+            "patient_id",
+            "retinopathy_left",
+            "retinopathy_right",
+            "confidence",
+            "risk",
+            "left_img",
+            "right_img",
+            "json_path",
+            "pdf_path",
+            "summary",
+        }
+
+        clean_data = {k: v for k, v in data.items() if k in allowed}
+
+        d = Diagnosis(**clean_data)
         self.s.add(d)
         self.s.commit()
         self.s.refresh(d)
         return d
+
 
     # ---------- READ ----------
     def get_patient(self, pid):

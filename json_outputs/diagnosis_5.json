@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-02T13:44:22.135672"
+  },
+  "patient_info": {
+    "id": 5,
+    "name": "Test Patient",
+    "age": 45,
+    "sex": "M",
+    "bmi": 24.49,
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "left_eye": "Mild",
+    "right_eye": "Mild",
+    "confidence": 85.5,
+    "risk_score": 4.0
+  },
+  "llm_report": {
+    "condition_overview": "Test Patient, a 45-year-old male, has been diagnosed with a mild eye condition affecting both the left and right eyes. The diagnostic confidence is 85.5%, and the associated risk score is 4.0. This 'mild' classification typically suggests early-stage changes, potentially related to an underlying systemic condition given the patient's insulin levels, although the specific condition (e.g., diabetic retinopathy) is not explicitly stated in the diagnosis. Regular monitoring is crucial to prevent progression.",
+    "patient_assessment": "The patient is a 45-year-old male with a healthy BMI of 24.49, indicating no obesity. He is a non-smoker and reports low alcohol consumption, which are positive health indicators. He also has no history of vascular disease. However, his insulin level of 12.0 could be a factor in metabolic health and warrants further investigation, as elevated insulin can be associated with insulin resistance and an increased risk of conditions that affect ocular health. Overall, the patient presents with several modifiable risk factors managed well, but the insulin level and the eye diagnosis point to potential metabolic considerations.",
+    "implications": "A 'mild' eye condition implies early-stage changes that may not currently significantly impair vision but carry a risk of progression if not managed. Potential implications include the need for ongoing ophthalmological surveillance, possible lifestyle adjustments, and management of any underlying systemic conditions (like insulin resistance or pre-diabetes/diabetes) that could contribute to ocular health issues. Without intervention, there's a risk of the condition worsening, potentially leading to visual impairment over time.",
+    "treatment_plan": "The initial treatment plan for a 'mild' eye condition typically focuses on monitoring and managing any underlying systemic risk factors. This includes: 1. Regular follow-up ophthalmological examinations (e.g., every 6-12 months) to track the condition's progression. 2. Collaboration with a primary care physician to investigate the elevated insulin levels and manage metabolic health (e.g., through diet, exercise, and potentially medication if indicated). 3. Lifestyle recommendations such as maintaining a balanced diet, regular physical activity, and avoiding smoking and excessive alcohol. 4. Patient education on the importance of adherence to monitoring and systemic health management.",
+    "life_impact": "Given the 'mild' classification, the current impact on daily life is likely minimal, with no significant visual impairment expected immediately. However, the diagnosis may introduce a need for regular medical appointments, potential dietary and lifestyle modifications, and an awareness of the condition's future implications. It may require the patient to be more proactive in managing their overall health, particularly metabolic factors, to prevent the progression of the eye condition and maintain quality of life.",
+    "financial_impact": "The financial impact at the 'mild' stage will primarily involve costs associated with regular ophthalmological check-ups, potential additional diagnostic tests (e.g., blood work for metabolic health), and follow-up consultations with a primary care physician or endocrinologist. These costs can vary depending on insurance coverage, deductibles, and co-pays. If the condition progresses and requires more intensive treatments in the future, the financial burden could increase significantly.",
+    "recovery_projection": "For a 'mild' eye condition, 'recovery' often means stabilizing the condition and preventing progression rather than a complete reversal of changes. With diligent adherence to recommended monitoring, management of underlying systemic health conditions (especially those related to insulin levels), and healthy lifestyle choices, the prognosis is generally good for maintaining vision and preventing the condition from worsening. Without appropriate management, there is a risk of progression to more severe stages, which could lead to irreversible visual impairment.",
+    "additional_assessments": "To comprehensively assess the patient's condition and risk factors, the following additional assessments are recommended: 1. Comprehensive metabolic panel (CMP) and HbA1c to further evaluate glucose metabolism and rule out pre-diabetes or diabetes. 2. Lipid panel to assess cholesterol levels. 3. Blood pressure check. 4. Detailed dilated eye exam by an ophthalmologist, including fundus photography or OCT, to establish a baseline and identify specific features of the mild eye condition. 5. Consultation with an endocrinologist if metabolic irregularities are significant.",
+    "compliance_notice": "This information is for informational purposes only and does not constitute medical advice. It is crucial for the patient to consult with qualified healthcare professionals, including an ophthalmologist and their primary care physician, for an accurate diagnosis, personalized treatment plan, and ongoing management of their condition. Adherence to medical recommendations is vital for optimal health outcomes."
+  }
+}

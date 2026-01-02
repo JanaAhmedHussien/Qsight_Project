@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-02T13:25:52.005603"
+  },
+  "patient_info": {
+    "id": 4,
+    "name": "Test Patient",
+    "age": 45,
+    "sex": "M",
+    "bmi": 24.49,
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "stage": "Mild",
+    "confidence": 85.5,
+    "risk_score": 4.0
+  },
+  "llm_narrative_summary": "Mild diabetic retinopathy is the **earliest stage of eye damage caused by diabetes.**\n\nHere's a simple breakdown:\n\n1.  **Diabetes and Blood Vessels:** Over time, high blood sugar from diabetes can damage the tiny blood vessels all over your body, including those in your eyes.\n2.  **The Retina:** The retina is the light-sensing tissue at the back of your eye, like the film in a camera. It needs healthy blood vessels to work properly.\n3.  **\"Mild\" Stage:** At this early stage, the damage is very minor. The tiny blood vessels in your retina might start to weaken and develop small bulges (called microaneurysms) or leak tiny amounts of fluid.\n4.  **No Symptoms (Usually):** Most people with mild diabetic retinopathy don't notice any changes in their vision because the damage is so minimal and usually doesn't affect the central part of their vision.\n5.  **Warning Sign:** It's a warning that diabetes is starting to affect your eyes. It means you need to continue carefully managing your blood sugar, blood pressure, and cholesterol to prevent the condition from getting worse.\n\nIn short, it's a **small, early sign of diabetes-related eye changes that usually doesn't affect your vision yet, but requires monitoring.**"
+}

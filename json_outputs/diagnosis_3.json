@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-02T14:58:38.434986"
+  },
+  "patient_info": {
+    "id": 3,
+    "name": "Test Patient",
+    "age": 45,
+    "sex": "M",
+    "bmi": 24.49,
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "left_eye": "Mild",
+    "right_eye": "Mild",
+    "confidence": 85.5,
+    "risk_score": 4.0
+  },
+  "llm_report": {
+    "condition_overview": "The patient presents with a mild condition affecting both the left and right eyes. The diagnostic confidence for this assessment is 85.5%, with an associated risk score of 4.0. While the specific underlying condition is not detailed, the 'mild' classification suggests early-stage involvement that requires attention and monitoring.",
+    "patient_assessment": "Mr. Test Patient is a 45-year-old male with a healthy BMI of 24.49, indicating normal weight. He is a non-smoker, consumes alcohol at a low level, and has no history of vascular disease, which are positive indicators for overall health. His insulin level of 12.0 is at the higher end of the normal range and warrants further investigation, especially in the context of eye health, as it could be a risk factor for certain conditions like diabetic retinopathy. Overall, the patient appears to be in relatively good health, but the eye condition needs careful management.",
+    "implications": "A mild eye condition, while not immediately vision-threatening, implies early-stage changes that could potentially progress if not adequately managed. Potential implications include subtle visual disturbances, eye strain, or discomfort. Without proper monitoring and intervention, there's a risk of the condition worsening over time, potentially leading to more significant vision impairment or other complications. Regular follow-up is crucial to prevent progression.",
+    "treatment_plan": "The primary treatment plan for a mild eye condition typically involves close monitoring through regular, comprehensive ophthalmic examinations. Depending on the specific diagnosis, lifestyle modifications such as dietary adjustments (e.g., low glycemic index foods to help manage insulin levels), regular exercise, and maintaining overall good health may be recommended. If specific underlying causes are identified (e.g., if diabetes is diagnosed), targeted treatments such as medications, eye drops, or, in some cases, minor procedures might be considered. The focus will be on stabilization and preventing progression.",
+    "life_impact": "A mild eye condition generally has minimal immediate impact on daily life. However, patients might experience occasional blurry vision, increased sensitivity to light, or eye fatigue, especially during prolonged visual tasks like reading or computer use. It will necessitate more frequent ophthalmologist visits, which could impact work or personal schedules. Adherence to management plans and lifestyle recommendations is key to preventing adverse impacts on quality of life.",
+    "financial_impact": "The financial impact would primarily stem from regular eye examinations, specialist consultations, and potential diagnostic tests (e.g., Optical Coherence Tomography (OCT), fundus photography). If medication, specific treatments, or corrective eyewear become necessary, these would incur additional costs. While a mild condition may not require immediate expensive interventions, ongoing monitoring and potential future treatments can accumulate expenses. Insurance coverage would significantly mitigate these costs.",
+    "recovery_projection": "Given the 'mild' classification, the prognosis is generally favorable with appropriate management and diligent monitoring. While 'recovery' might depend on the specific underlying cause, the primary goal is often to stabilize the condition and prevent further progression. Early detection and proactive management can frequently maintain current vision levels and prevent significant deterioration. Regular follow-ups are essential to track the condition's course and adjust the management plan as needed.",
+    "additional_assessments": "Further assessments may include comprehensive dilated eye exams, visual acuity tests, intraocular pressure measurements, and specific imaging techniques such as Optical Coherence Tomography (OCT) to evaluate retinal layers and macula. Fluorescein angiography might be considered if vascular issues are suspected. Given the elevated insulin level, blood tests to assess overall metabolic health, particularly fasting glucose and HbA1c levels, are highly recommended to screen for or manage diabetes, which is a significant risk factor for various eye conditions.",
+    "compliance_notice": "This information is generated by an AI assistant for informational purposes only and should not be considered medical advice. It is crucial to consult with a qualified healthcare professional or ophthalmologist for an accurate diagnosis, personalized treatment plan, and any health concerns. Do not disregard professional medical advice or delay seeking it because of information obtained from this AI."
+  }
+}
