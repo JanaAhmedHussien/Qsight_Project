@@ -2,7 +2,7 @@
   "metadata": {
     "system": "QSight",
     "version": "1.0",
-    "generated_at": "2025-12-26T20:29:13.409749"
+    "generated_at": "2026-01-02T23:28:36.542515"
   },
   "patient_info": {
     "id": 10,
@@ -23,9 +23,57 @@
     "task": "Diabetic Retinopathy Classification"
   },
   "diagnosis_info": {
-    "stage": "Mild",
+    "left_eye": "Mild",
+    "right_eye": "Mild",
     "confidence": 85.5,
     "risk_score": 4.0
   },
-  "llm_narrative_summary": "Imagine the back of your eye has a delicate network of tiny blood vessels, like very fine pipes.\n\n**Mild diabetic retinopathy** means that a *few* of these tiny blood vessels in your retina have started to show very early signs of damage because of high blood sugar from diabetes.\n\nHere's what that typically means:\n\n1.  **Tiny Leaks:** Some of the small blood vessels might become slightly weakened and develop tiny, pinprick-sized bulges (called microaneurysms) or even leak a tiny bit of fluid or blood.\n2.  **No Symptoms (Usually):** Crucially, because these changes are so small and few, people with mild diabetic retinopathy **usually don't notice any changes in their vision.** It doesn't typically blur your sight at this stage.\n3.  **Early Warning Sign:** It's an early warning sign that your diabetes is starting to affect your eyes. It means your eye doctor can see these changes during a comprehensive eye exam.\n\nThe main goal at this stage is to **manage your blood sugar, blood pressure, and cholesterol very well** to prevent the condition from getting worse and becoming more severe. Regular dilated eye exams are essential to monitor these changes."
+  "llm_report": {
+    "condition_overview": "Diabetic retinopathy (DR) is microvascular damage to the retina from diabetes. Mild DR observed in both eyes (OU). Confidence: 85.5%.",
+    "patient_assessment": "45-year-old male with mild bilateral DR. Primary risk factor: Insulin-dependent diabetes. Favorable factors: Healthy BMI, non-smoker, low alcohol intake, no overt vascular disease. Risk score 4.0 indicates ongoing risk for progression.",
+    "implications": "Risk of DR progression to proliferative DR, diabetic macular edema. Potential for severe vision loss, blindness if untreated. Systemic microvascular compromise likely present.",
+    "treatment_plan": {
+      "Medical Management": [
+        "Optimize glycemic control (HbA1c target <7%).",
+        "Maintain blood pressure <130/80 mmHg.",
+        "Manage dyslipidemia (LDL target <100 mg/dL)."
+      ],
+      "Ophthalmologic Monitoring": [
+        "Dilated fundus examination every 6-12 months.",
+        "Optical coherence tomography (OCT) as indicated."
+      ],
+      "Lifestyle Guidance": [
+        "Diet: Emphasize low glycemic index foods, limit saturated fats, increase antioxidant-rich vegetables/fruits.",
+        "Eye protection: Wear UV-blocking sunglasses outdoors.",
+        "Glycemic control: Consistent medication adherence, regular blood glucose monitoring.",
+        "Physical activity: Regular moderate exercise.",
+        "Smoking cessation: Critical for vascular health (patient advised to maintain non-smoker status).",
+        "Alcohol moderation: Continue low intake."
+      ]
+    },
+    "life_impact": [
+      "Currently minimal visual impairment.",
+      "Potential for future blurry vision, floaters.",
+      "Future impact on driving, reading, fine visual tasks possible."
+    ],
+    "financial_impact": {
+      "Monitoring Costs": [
+        "Regular ophthalmologic examinations.",
+        "Retinal imaging (OCT, DFE)."
+      ],
+      "Therapy Costs": [
+        "Potential future anti-VEGF injections, laser photocoagulation, vitrectomy surgery."
+      ],
+      "Systemic Management Costs": [
+        "Ongoing diabetes medication, primary care visits, endocrinology consultations."
+      ]
+    },
+    "recovery_projection": "With stringent glycemic, blood pressure, lipid control, and regular ophthalmologic follow-up, disease progression can be slowed or halted. Vision stabilization is expected. Regression of mild DR is possible. Non-adherence risks rapid progression and irreversible vision loss.",
+    "additional_assessments": [
+      "Referral to endocrinology for diabetes optimization.",
+      "Referral to primary care for comprehensive systemic risk factor management.",
+      "Baseline HbA1c, lipid panel, renal function tests."
+    ],
+    "compliance_notice": "Strict adherence to medical regimen, lifestyle modifications, and scheduled ophthalmologic follow-ups is critical to preserve vision."
+  }
 }

@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-02T23:48:37.572437"
+  },
+  "patient_info": {
+    "id": 14,
+    "name": "Test Patient",
+    "age": 45,
+    "sex": "M",
+    "bmi": 24.49,
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "left_eye": "Mild",
+    "right_eye": "Mild",
+    "confidence": 85.5,
+    "risk_score": 4.0
+  },
+  "llm_report": {
+    "condition_overview": "You have been diagnosed with a mild ocular condition affecting both your left and right eyes. This is an early stage finding that currently does not threaten your vision, but warrants monitoring and proactive management to maintain ocular health.",
+    "patient_assessment": "\u2022 Age: 45-year-old male\n\u2022 Bilateral mild ocular findings\n\u2022 Healthy BMI (24.49)\n\u2022 Non-smoker, low alcohol consumption\n\u2022 No history of vascular disease\n\u2022 Current risk score of 4.0 indicates low immediate risk for severe complications",
+    "implications": "\u2022 Early stage condition, currently non-vision-threatening\n\u2022 Potential for slow progression if unmanaged\n\u2022 Regular monitoring is essential to track any changes\n\u2022 Proactive lifestyle and management can help preserve ocular health",
+    "treatment_plan": "\u2022 Lifestyle: Maintain a balanced diet rich in leafy greens and omega-3 fatty acids; ensure adequate hydration; protect eyes from UV radiation with sunglasses; practice screen breaks using the 20-20-20 rule.\n\u2022 Monitoring: Annual comprehensive ophthalmologic examination, or sooner if new symptoms arise.\n\u2022 Medical: No specific medical treatment is indicated at this mild stage.\n\u2022 Follow-up: Schedule next appointment in 12 months for re-evaluation.",
+    "life_impact": "Minimal impact on daily life at present. Awareness and consistent adherence to lifestyle recommendations are crucial for maintaining ocular health and potentially preventing progression.",
+    "financial_impact": "Primarily involves costs associated with routine ophthalmologic examinations and potential over-the-counter supplements, if advised by your doctor.",
+    "recovery_projection": "With consistent adherence to the recommended lifestyle modifications and regular monitoring, the prognosis is favorable for maintaining stability and preventing progression of the condition.",
+    "additional_assessments": "\u2022 Baseline optical coherence tomography (OCT) of the retina\n\u2022 Fundus photography for documentation and future comparison\n\u2022 Comprehensive visual acuity and refraction assessment",
+    "compliance_notice": "This report summarizes current findings and recommendations. It is not a substitute for direct medical advice or further consultation with your healthcare provider. Adherence to the treatment plan is essential for optimal outcomes."
+  }
+}

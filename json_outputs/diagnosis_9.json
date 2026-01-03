@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-02T23:12:52.634122"
+  },
+  "patient_info": {
+    "id": 9,
+    "name": "Test Patient",
+    "age": 45,
+    "sex": "M",
+    "bmi": 24.49,
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "left_eye": "Mild",
+    "right_eye": "Mild",
+    "confidence": 85.5,
+    "risk_score": 4.0
+  },
+  "llm_report": {
+    "condition_overview": "Diabetic retinopathy, a microvascular complication of diabetes affecting the retina. Bilateral mild non-proliferative diabetic retinopathy (NPDR) confirmed. Confidence 85.5%.",
+    "patient_assessment": "Patient 45M with established diabetes. BMI 24.49. Insulin dependent. Non-smoker. Low alcohol consumption. No history of vascular disease. Risk score 4.0 indicates ongoing risk of progression. Mild DR presence necessitates strict systemic control.",
+    "implications": "Potential for progression to moderate/severe NPDR, proliferative diabetic retinopathy (PDR), or diabetic macular edema (DME). Visual impairment, vision loss, or blindness possible if untreated. Systemic microvascular complications (nephropathy, neuropathy) frequently co-occur.",
+    "treatment_plan": {
+      "monitoring": [
+        "Dilated fundus examination every 6-12 months.",
+        "Optical Coherence Tomography (OCT) as indicated for macular edema screening.",
+        "Fluorescein angiography if progression or macular edema suspected."
+      ],
+      "systemic_management": [
+        "Optimize glycemic control (HbA1c <7%).",
+        "Blood pressure control (<130/80 mmHg).",
+        "Lipid management (LDL <100 mg/dL)."
+      ],
+      "lifestyle_guidance": [
+        "**Diet**: Emphasize low glycemic index foods, reduced saturated fat, increased antioxidant-rich vegetables/fruits.",
+        "**Exercise**: Regular physical activity.",
+        "**Eye Protection**: Consistent use of UV-blocking sunglasses outdoors.",
+        "Maintain healthy weight."
+      ],
+      "ophthalmic_intervention_future_consideration": [
+        "Anti-VEGF injections for DME.",
+        "Laser photocoagulation (focal/grid for DME, panretinal for PDR)."
+      ]
+    },
+    "life_impact": [
+      "Currently minimal visual impact.",
+      "Progression can cause difficulty with reading fine print.",
+      "Impaired night vision possible.",
+      "Reduced ability to drive safely possible.",
+      "Challenges with daily tasks requiring detailed vision possible."
+    ],
+    "financial_impact": "Ongoing costs include: regular ophthalmologic examinations, diagnostic imaging (OCT, FA). Potential future therapies: anti-VEGF injections, laser treatments, vitrectomy, systemic medication costs.",
+    "recovery_projection": "Adherence to systemic and ophthalmic management can stabilize disease, slow progression, and preserve vision. Reversal of existing microvascular damage is limited; primary goal is preventing further deterioration and vision loss. Early intervention improves prognosis.",
+    "additional_assessments": [
+      "Referral to endocrinologist for comprehensive diabetes management review.",
+      "Baseline HbA1c, lipid panel, and renal function tests.",
+      "Consideration for primary care physician co-management of systemic risk factors.",
+      "Neurology/Nephrology consultation if systemic neuropathy or nephropathy suspected."
+    ],
+    "compliance_notice": "Strict adherence to follow-up schedules is critical for early detection of disease progression. Consistent glycemic, blood pressure, and lipid control significantly impacts retinopathy outcomes. Non-compliance increases risk of irreversible vision loss."
+  }
+}

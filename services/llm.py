@@ -23,16 +23,16 @@ class LLM:
         return {
             "role": "user",
             "content": f"""
-    You are a board-certified ophthalmologist specializing in diabetic retinopathy.
-    Write a concise, clinical medical report.
+    You are a healthcare AI assistant specializing in ophthalmology. Write this report as an ophthalmologist would for a patient.
 
-    IMPORTANT RULES:
-    - Return STRICT JSON only
-    - No markdown
-    - No filler phrases (e.g. "are recommended", "it is advised")
-    - Use short clinical bullet-style sentences
-    - Condense information; clarity over expressiveness
-    - Lifestyle guidance should be specific (diet focus, eye protection, glycemic control)
+    Return STRICT JSON only. No markdown. No explanations outside JSON.
+
+    Guidelines:
+    - Be concise and structured
+    - Use bullet points for key information
+    - Summarize when possible
+    - Use clinical language but remain clear
+    - Focus on actionable information
 
     Patient:
     Name: {patient.name}
@@ -52,26 +52,20 @@ class LLM:
     Confidence: {diag['confidence']}
     Risk Score: {diag['risk']}
 
-    JSON schema (concise, clinical tone):
+    JSON schema - Each field should contain structured, concise content:
     {{
-    "condition_overview": "Brief definition and severity summary.",
-    "patient_assessment": "Key risk factors and clinical interpretation.",
-    "implications": "Potential visual and systemic consequences.",
-    "treatment_plan": "Outline format. Clinical interventions and monitoring.",
-    "life_impact": "Short bullet points. Daily vision and activity effects.",
-    "financial_impact": "Expected cost categories (monitoring, therapy).",
-    "recovery_projection": "Expected course with adherence.",
-    "additional_assessments": "Required tests or referrals.",
-    "compliance_notice": "Importance of follow-up and treatment adherence."
+    "condition_overview": "Brief 2-3 sentence overview",
+    "patient_assessment": "Bulleted assessment points (use • for bullets)",
+    "implications": "Key implications in bullet points",
+    "treatment_plan": "Structured as:\n• Lifestyle: [specific recommendations]\n• Monitoring: [specific plan]\n• Medical: [if any]\n• Follow-up: [schedule]",
+    "life_impact": "Brief impact summary",
+    "financial_impact": "Key cost points",
+    "recovery_projection": "Realistic prognosis",
+    "additional_assessments": "Bulleted list of recommended tests",
+    "compliance_notice": "Standard disclaimer"
     }}
-
-    Lifestyle guidance rules:
-    - Diet: specify focus (glycemic control, low saturated fat, antioxidants)
-    - Eye protection: UV protection explicitly stated
-    - Avoid narrative language
     """
         }
-
 
     # ---------- ChatGPT ----------
     def _chatgpt(self, patient, diag):

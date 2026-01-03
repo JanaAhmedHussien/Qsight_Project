@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-03T00:30:53.125178"
+  },
+  "patient_info": {
+    "id": 17,
+    "name": "Test Patient",
+    "age": 45,
+    "sex": "M",
+    "bmi": 24.49,
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "left_eye": "Mild",
+    "right_eye": "Mild",
+    "confidence": 85.5,
+    "risk_score": 4.0
+  },
+  "llm_report": {
+    "condition_overview": "You have been diagnosed with mild ocular changes affecting both your left and right eyes. These findings indicate early signs of a specific ocular condition, which in your case, is presently in its least severe form. Our confidence in this diagnosis is 85.5%.",
+    "patient_assessment": "\u2022   45-year-old male.\n\u2022   Body Mass Index (BMI) of 24.49, which is within the healthy range.\n\u2022   No history of smoking, low alcohol consumption, and no known vascular disease.\n\u2022   Insulin level: 12.0.\n\u2022   Diagnosis: Mild changes observed in both the left and right eyes, with a calculated risk score of 4.0.",
+    "implications": "\u2022   Given the mild stage, the immediate risk of significant vision loss is low.\n\u2022   Potential for progression exists if not appropriately monitored and managed.\n\u2022   Early detection at this stage allows for proactive intervention and lifestyle modifications to preserve ocular health.\n\u2022   Regular follow-up is crucial to track any changes.",
+    "treatment_plan": "\u2022   Lifestyle: Maintain a healthy weight, adopt a balanced diet rich in antioxidants, engage in regular physical activity, and continue abstaining from smoking and limiting alcohol intake.\n\u2022   Monitoring: Regular comprehensive ophthalmologic examinations are essential to monitor the condition. We recommend a follow-up schedule as outlined below.\n\u2022   Medical: Currently, no specific medical treatment is typically required for this mild stage. Management focuses on lifestyle and monitoring.\n\u2022   Follow-up: Annual comprehensive ophthalmologic examination, or sooner if any new symptoms arise.",
+    "life_impact": "At this mild stage, the condition typically has minimal impact on your daily life or visual function. Adherence to lifestyle recommendations and monitoring is key to maintaining this minimal impact long-term.",
+    "financial_impact": "\u2022   Costs will primarily involve co-pays or deductibles for regular ophthalmologic examinations and any necessary diagnostic tests.\n\u2022   Future costs could increase if the condition progresses and requires more intensive monitoring or interventions.",
+    "recovery_projection": "With proactive management, including adherence to lifestyle recommendations and regular monitoring, the prognosis is generally excellent. The goal is to stabilize the condition and prevent or slow progression, thereby preserving your vision long-term.",
+    "additional_assessments": "\u2022   Comprehensive Visual Acuity (VA) and Refraction\n\u2022   Slit Lamp Biomicroscopy\n\u2022   Dilated Fundus Examination (DFE)\n\u2022   Optical Coherence Tomography (OCT) for baseline imaging\n\u2022   Fundus Photography for documentation and comparison",
+    "compliance_notice": "This report is provided for informational purposes only and should not be considered a substitute for professional medical advice. Always consult your ophthalmologist or healthcare provider for personalized diagnosis, treatment, and medical advice."
+  }
+}
