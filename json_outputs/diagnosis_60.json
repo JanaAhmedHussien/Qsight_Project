@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-03T20:57:45.115803"
+  },
+  "patient_info": {
+    "id": 60,
+    "name": "Test Patient",
+    "age": 45,
+    "sex": "M",
+    "bmi": 24.49,
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "left_eye": "Mild",
+    "right_eye": "Mild",
+    "confidence": 85.5,
+    "risk_score": 4.0
+  },
+  "llm_report": {
+    "condition_overview": {
+      "diagnosis": "Mild bilateral non-proliferative diabetic retinopathy (NPDR). Left eye exhibits mild NPDR, and the Right eye also presents with mild NPDR. The diagnosis is made with an 85.5% confidence level, and the associated risk score for progression is 4.0, indicating a low to moderate risk at this stage.",
+      "details": "Funduscopic examination revealed microaneurysms and/or dot-blot hemorrhages in both eyes, consistent with early changes of diabetic retinopathy. No signs of macular edema, neovascularization, or significant vitreous hemorrhage were noted."
+    },
+    "patient_assessment": {
+      "summary": "Mr. Test Patient is a 45-year-old male with a BMI of 24.49, which is within the healthy weight range. His insulin level of 12.0 is slightly elevated, suggesting potential insulin resistance or pre-diabetes, which is consistent with the current ophthalmic findings. He reports being a non-smoker and has low alcohol consumption. There is no reported history of vascular disease. Overall, systemic health appears stable, but there is an underlying metabolic risk factor as indicated by the insulin level and the ocular diagnosis.",
+      "relevant_factors": {
+        "age": "45 M",
+        "bmi": "24.49 (Healthy weight)",
+        "insulin": "12.0 (Slightly elevated, suggesting insulin resistance/pre-diabetes)",
+        "smoker": "No",
+        "alcohol": "Low",
+        "vascular_disease": "No"
+      }
+    },
+    "implications": {
+      "short_term": "At the current mild stage, Mr. Patient's vision is unlikely to be significantly affected. However, the presence of diabetic retinopathy indicates systemic microvascular damage related to glucose dysregulation.",
+      "long_term": "Without effective systemic management of blood glucose, there is a risk of progression to more severe stages of diabetic retinopathy, including proliferative diabetic retinopathy and diabetic macular edema. These advanced stages can lead to severe vision loss, including blindness, due to vitreous hemorrhage, retinal detachment, or persistent macular edema."
+    },
+    "treatment_plan": {
+      "ophthalmic_management": "No immediate ophthalmic intervention (e.g., laser, anti-VEGF injections) is required for mild NPDR. Close monitoring with dilated fundus examinations every 6-12 months is recommended.",
+      "systemic_management": "Immediate referral to his primary care physician and/or an endocrinologist is paramount for comprehensive evaluation and optimization of systemic glucose control, including a full diabetes workup (e.g., HbA1c, fasting glucose, oral glucose tolerance test). Emphasis on lifestyle modifications (dietary changes to reduce carbohydrate intake, regular physical activity) is crucial.",
+      "education": "Patient education regarding the link between blood sugar control and ocular health, the importance of regular follow-ups, and symptoms of worsening vision (e.g., blurriness, floaters, distorted vision) will be provided."
+    },
+    "life_impact": {
+      "current_impact": "Currently, the impact on daily life is minimal as vision is likely unaffected. However, the diagnosis may cause psychological stress or anxiety regarding future vision.",
+      "future_impact": "The need for ongoing medical appointments (ophthalmology, primary care, endocrinology) will require time commitment. Potential future vision impairment, if the condition progresses, could affect activities of daily living, driving, and employment. Early and aggressive systemic management is key to mitigating these impacts."
+    },
+    "financial_impact": {
+      "immediate_costs": "Costs will include co-pays or deductibles for regular ophthalmology appointments, primary care visits, endocrinology consultations, and necessary laboratory tests (e.g., HbA1c, glucose monitoring supplies).",
+      "potential_future_costs": "If the condition progresses, significant costs could arise from advanced treatments such as retinal laser photocoagulation, intravitreal injections of anti-VEGF agents or steroids, and potentially vitrectomy surgery. These treatments can be very expensive and may involve recurring costs."
+    },
+    "recovery_projection": {
+      "outlook": "There is no 'recovery' in the sense of reversing the existing microvascular changes. However, with strict and sustained control of blood glucose levels, blood pressure, and lipids, the progression of diabetic retinopathy can be significantly slowed or even halted. The goal is to maintain stable vision and prevent progression to sight-threatening stages.",
+      "prognosis": "Prognosis for maintaining good vision is excellent provided the patient adheres to regular ophthalmic monitoring and, critically, achieves optimal systemic metabolic control. Failure to do so significantly increases the risk of visual impairment."
+    },
+    "additional_assessments": {
+      "ophthalmic": "Repeat dilated fundus examination in 6 months. Optical Coherence Tomography (OCT) of the macula may be considered at baseline or if any signs of macular edema develop.",
+      "systemic": "Referral to primary care physician/endocrinologist for comprehensive diabetes evaluation including HbA1c, fasting blood glucose, lipid panel, and blood pressure monitoring. Evaluation for other diabetes-related complications (e.g., nephropathy, neuropathy) is also recommended."
+    },
+    "compliance_notice": "Patient is advised that adherence to all recommended follow-up ophthalmology appointments is critical for monitoring disease progression. Strict compliance with systemic medical management recommendations from their primary care physician and endocrinologist, including blood glucose control, blood pressure management, and lifestyle modifications, is paramount to preserving vision and preventing further ocular and systemic complications. Any new visual symptoms (e.g., blurred vision, new floaters, shadows, pain) should be reported immediately."
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-03T20:54:33.262124"
+  },
+  "patient_info": {
+    "id": 58,
+    "name": "Test Patient",
+    "age": 45,
+    "sex": "M",
+    "bmi": 24.49,
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "left_eye": "Mild",
+    "right_eye": "Mild",
+    "confidence": 85.5,
+    "risk_score": 4.0
+  },
+  "llm_report": {
+    "condition_overview": "Test Patient, a 45-year-old male, has been diagnosed with a mild ophthalmologic condition in both the left and right eyes. The diagnostic confidence is 85.5%, and the associated risk score is 4.0. The specific nature of the mild condition suggests early-stage involvement, indicating a need for proactive management.",
+    "patient_assessment": "Mr. Test Patient is a 45-year-old male with a BMI of 24.49, which is within the healthy range. His insulin level is 12.0, which warrants continued monitoring. He is a non-smoker and reports low alcohol consumption. There is no history of vascular disease. These systemic factors are generally favorable, providing a good baseline for managing his ocular condition.",
+    "implications": "Given the mild classification in both eyes, current visual acuity and daily functioning are likely minimally affected. However, the condition carries the potential for progression, which could eventually impact vision, depth perception, and quality of life if not managed. Early diagnosis allows for timely intervention strategies to slow or prevent further deterioration, aiming to preserve long-term visual health. Specific implications may include subtle visual disturbances under certain conditions, such as reduced contrast sensitivity or increased glare.",
+    "treatment_plan": "The primary treatment approach at this mild stage will focus on watchful waiting and aggressive risk factor modification. Regular monitoring appointments are crucial. Lifestyle recommendations include maintaining a balanced diet, incorporating regular physical activity, and continued avoidance of smoking. Mr. Test Patient should also be advised on ocular hygiene and protective measures. Specific topical or systemic pharmacologic interventions are not indicated at this time but will be considered if progression is observed.",
+    "life_impact": "Currently, the impact on Mr. Test Patient's daily life, work, and hobbies is expected to be minimal due to the mild nature of the condition. He should be advised to remain vigilant for any subtle changes in his vision, such as blurriness, distortions, or changes in color perception. While minimal physical restrictions are anticipated, the psychological impact of a chronic eye condition, including potential anxiety regarding future vision, should be addressed and monitored.",
+    "financial_impact": "The initial financial impact will primarily involve costs associated with regular follow-up ophthalmological examinations, including any required imaging tests (e.g., OCT, visual fields). These costs may be covered partially or fully by his health insurance, depending on the specifics of his plan. There are no immediate prescription costs. Should the condition progress and necessitate more intensive interventions, future costs for medications, specialized procedures, or assistive devices could significantly increase.",
+    "recovery_projection": "For a mild ophthalmologic condition, the goal is typically stabilization and prevention of progression rather than complete 'recovery' or reversal. With diligent adherence to recommended lifestyle modifications, regular monitoring, and timely intervention should progression occur, the projection is for the condition to remain stable or to progress very slowly over time. The 85.5% confidence and 4.0 risk score suggest a manageable prognosis with appropriate, proactive care.",
+    "additional_assessments": "Recommended additional assessments include a baseline Optical Coherence Tomography (OCT) of both eyes to establish retinal thickness and structure, detailed fundus photography to document the current state of the optic nerve and retina, and potentially visual field testing to assess for any peripheral vision loss. Follow-up examinations will be scheduled every 6-12 months, or sooner if new symptoms arise or significant changes are noted, to monitor for any signs of progression.",
+    "compliance_notice": "Patient compliance with all scheduled follow-up appointments and strict adherence to recommended lifestyle modifications are absolutely paramount for the successful long-term management of this mild condition. Early detection of any progression through regular monitoring allows for timely intervention, which can significantly improve long-term visual outcomes and reduce the risk of severe vision loss. Failure to comply may lead to undetected progression of the disease, resulting in more advanced and potentially irreversible changes requiring more aggressive and less effective treatments."
+  }
+}

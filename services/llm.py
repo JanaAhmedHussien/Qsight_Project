@@ -3,8 +3,8 @@ import requests, json, config
 class LLM:
     def generate_report(self, patient, diag):
         for fn in (
-            ("ChatGPT", self._chatgpt),
             ("Gemini", self._gemini),
+            ("ChatGPT", self._chatgpt),
             ("Groq", self._groq),
             ("HuggingFace", self._hf),
         ):
@@ -52,18 +52,25 @@ class LLM:
     Confidence: {diag['confidence']}
     Risk Score: {diag['risk']}
 
-    JSON schema - Each field should contain structured, concise content:
-    {{
-    "condition_overview": "Brief 2-3 sentence overview",
-    "patient_assessment": "Bulleted assessment points (use • for bullets)",
-    "implications": "Key implications in bullet points",
-    "treatment_plan": "Structured as:\n• Lifestyle: [specific recommendations]\n• Monitoring: [specific plan]\n• Medical: [if any]\n• Follow-up: [schedule]",
-    "life_impact": "Brief impact summary",
-    "financial_impact": "Key cost points",
-    "recovery_projection": "Realistic prognosis",
-    "additional_assessments": "Bulleted list of recommended tests",
-    "compliance_notice": "Standard disclaimer"
-    }}
+
+JSON schema - Each field should contain structured, concise content:
+{{
+"condition_overview": "Brief 2-3 sentence overview",
+"patient_assessment": "Provide as a list of clear bullet points, each on a new line starting with •",
+"implications": "Provide as a list of clear bullet points, each on a new line starting with •",
+"treatment_plan": "Structured as clear sections:\n• Lifestyle: [specific recommendations]\n• Monitoring: [specific plan]\n• Medical: [if any]\n• Follow-up: [schedule]",
+"life_impact": "Brief impact summary",
+"financial_impact": "Key cost points as bullet points",
+"recovery_projection": "Realistic prognosis",
+"additional_assessments": "Bulleted list of recommended tests",
+"compliance_notice": "Standard disclaimer"
+}}
+
+IMPORTANT: For bullet points, use proper formatting with each bullet on its own line.
+Example:
+• First point
+• Second point
+• Third point
     """
         }
 

@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-06T01:02:52.476603"
+  },
+  "patient_info": {
+    "id": 73,
+    "name": "Jana",
+    "age": 20,
+    "sex": "Female",
+    "bmi": 24.49,
+    "insulin": 12.0,
+    "smoker": false,
+    "alcohol": "None",
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "left_eye": "Moderate",
+    "right_eye": "No_DR",
+    "confidence": 70.389124751091,
+    "risk_score": 3.0,
+    "left_confidence": 50.38096904754639,
+    "right_confidence": 90.39728045463562
+  },
+  "llm_report": {
+    "condition_overview": "Ms. Jana, you have been diagnosed with moderate non-proliferative diabetic retinopathy (DR) in your left eye. This means that changes related to diabetes have begun to affect the small blood vessels in your retina, but typically, your vision remains good at this stage. Your right eye shows no signs of DR currently.",
+    "patient_assessment": "\u2022 Patient Name: Jana, Age: 20, Sex: Female\n\u2022 BMI: 24.49 (Within healthy range)\n\u2022 Insulin Level: 12.0 (Indicates elevated insulin, consistent with underlying diabetes or insulin resistance)\n\u2022 Non-smoker, no alcohol use, no history of vascular disease\n\u2022 Left Eye: Moderate Non-Proliferative Diabetic Retinopathy (NPDR)\n\u2022 Right Eye: No Diabetic Retinopathy (No_DR)\n\u2022 Diagnosis Confidence: 70.39%, Risk Score: 3.0 (Indicating a moderate risk profile)",
+    "implications": "\u2022 The presence of moderate DR in your left eye indicates that your diabetes is impacting your retinal health. Without proper management, there is a risk of progression to more severe forms of DR, which could potentially lead to vision impairment.\n\u2022 While your right eye is currently healthy, it remains at risk for developing DR due to your underlying diabetes.\n\u2022 At this stage, vision is typically unaffected, but close monitoring is essential to detect any changes early.",
+    "treatment_plan": "\u2022 Lifestyle: Strict control of blood sugar levels (HbA1c), blood pressure, and cholesterol is paramount. Maintain a healthy diet, engage in regular physical activity, and manage stress effectively.\n\u2022 Monitoring: Regular dilated eye examinations are crucial to monitor the progression of DR in your left eye and to screen for any changes in your right eye. We will also monitor for the development of diabetic macular edema (DME).\n\u2022 Medical: The primary medical treatment at this stage is optimal systemic management of your diabetes, often in conjunction with an endocrinologist. Direct ophthalmologic intervention (e.g., laser or injections) is generally not required for moderate NPDR unless there is associated clinically significant macular edema or progression to proliferative DR.\n\u2022 Follow-up: We recommend a follow-up ophthalmology appointment in 6 months for your left eye and 12 months for your right eye, or sooner if you experience any visual changes.",
+    "life_impact": "This diagnosis necessitates a proactive approach to your overall health. You will need to commit to rigorous diabetes management and regular eye care appointments. Early detection and management are key to preserving your vision and maintaining your quality of life.",
+    "financial_impact": "\u2022 Regular ophthalmology appointments, including dilated eye exams and potential imaging tests (e.g., OCT, FA).\n\u2022 Costs associated with ongoing diabetes management, including blood glucose monitoring supplies, medications, and visits with your primary care physician and/or endocrinologist.\n\u2022 Potential future costs for specialized treatments (e.g., anti-VEGF injections, laser therapy) if the condition progresses or if diabetic macular edema develops.",
+    "recovery_projection": "Diabetic retinopathy is a chronic condition that cannot be cured, but its progression can be significantly slowed or stabilized with excellent systemic control of your diabetes. The goal is to prevent vision loss. With diligent management, many patients with moderate DR maintain good vision for many years. However, progression is possible, especially with poor glycemic control.",
+    "additional_assessments": "\u2022 Referral to an endocrinologist for comprehensive diabetes management and optimization of blood sugar control (e.g., HbA1c, fasting glucose levels).\n\u2022 Optical Coherence Tomography (OCT) of the macula to thoroughly assess for early signs of diabetic macular edema (DME).\n\u2022 Fundus photography for baseline documentation and future comparison.",
+    "compliance_notice": "It is critical to adhere to all medical recommendations from your ophthalmologist and endocrinologist. Do not self-diagnose or alter your treatment plan without consulting your healthcare providers. This report is for informational purposes and does not replace direct medical consultation."
+  }
+}

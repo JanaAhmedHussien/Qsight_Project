@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-03T23:39:50.643141"
+  },
+  "patient_info": {
+    "id": 61,
+    "name": "Test Patient",
+    "age": 45,
+    "sex": "M",
+    "bmi": 24.49,
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "left_eye": "Mild",
+    "right_eye": "Mild",
+    "confidence": 85.5,
+    "risk_score": 4.0
+  },
+  "llm_report": {
+    "condition_overview": "You have mild, early-stage ocular findings in both your left and right eyes. These changes are currently not severe and generally manageable, but they warrant close monitoring to prevent any potential progression.",
+    "patient_assessment": "\u2022  Age-appropriate evaluation for early ocular changes\n\u2022  Healthy BMI (24.49)\n\u2022  Non-smoker and low alcohol consumption\n\u2022  No history of vascular disease\n\u2022  Mild ocular findings noted in both eyes (Left Eye: Mild, Right Eye: Mild) with good diagnostic confidence (85.5%) and a low associated risk score (4.0).",
+    "implications": "\u2022  The current mild nature of your condition suggests good potential for stability or slow progression with appropriate management.\n\u2022  Regular monitoring is crucial to detect any changes early.\n\u2022  While not immediately vision-threatening, potential for progression exists without ongoing attention.",
+    "treatment_plan": "\u2022 Lifestyle: Maintain current healthy habits, including a balanced diet and regular physical activity.\n\u2022 Monitoring: Schedule regular ophthalmic examinations to track the stability or progression of the ocular findings.\n\u2022 Medical: Currently, specific medical treatment is not required for these mild findings, but this will be reassessed at each follow-up.\n\u2022 Follow-up: Recommended follow-up in 6-12 months, or sooner if new symptoms arise.",
+    "life_impact": "These mild findings are expected to have minimal impact on your daily life or vision at present. Awareness and adherence to the recommended monitoring schedule are key to maintaining this status.",
+    "financial_impact": "Initial costs will include consultation fees and any recommended diagnostic tests. Future costs may arise from ongoing monitoring or, if progression occurs, potential interventions.",
+    "recovery_projection": "With consistent monitoring and adherence to recommendations, the prognosis is generally good, aiming to maintain your current visual function and prevent significant progression of the mild ocular changes.",
+    "additional_assessments": "\u2022  Comprehensive visual acuity and refractive assessment\n\u2022  Intraocular pressure (IOP) measurement\n\u2022  Dilated fundus examination\n\u2022  Baseline Optical Coherence Tomography (OCT) of relevant posterior segment structures (e.g., macula, optic nerve head) as indicated\n\u2022  Visual field testing if deemed necessary for baseline assessment",
+    "compliance_notice": "This report summarizes our current understanding of your ocular health. Adherence to the recommended treatment and follow-up plan is vital for optimal outcomes. This information does not replace direct medical advice from your healthcare provider."
+  }
+}

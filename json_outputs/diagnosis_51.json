@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-03T19:21:42.349302"
+  },
+  "patient_info": {
+    "id": 51,
+    "name": "Test Patient",
+    "age": 45,
+    "sex": "M",
+    "bmi": 24.49,
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "left_eye": "Mild",
+    "right_eye": "Mild",
+    "confidence": 85.5,
+    "risk_score": 4.0
+  },
+  "llm_report": {
+    "condition_overview": "The patient, Test Patient, has been diagnosed with mild eye conditions in both the left and right eyes, with a confidence level of 85.5% and a risk score of 4.0. This condition may progress if not properly managed. Regular monitoring and adherence to the treatment plan are crucial.",
+    "patient_assessment": "\u2022 Age: 45, \u2022 Sex: Male, \u2022 BMI: 24.49, \u2022 Non-smoker, \u2022 Low alcohol consumption, \u2022 No vascular disease, \u2022 Insulin level: 12.0",
+    "implications": "\u2022 Potential vision impairment if left untreated, \u2022 Increased risk of complications from related conditions, \u2022 Importance of early intervention and management",
+    "treatment_plan": "\u2022 Lifestyle: Maintain a healthy diet, regular exercise, and avoid smoking, \u2022 Monitoring: Regular eye exams every 6 months, \u2022 Medical: Consider prescription glasses or other corrective measures as needed, \u2022 Follow-up: Schedule follow-up appointments as recommended by the ophthalmologist",
+    "life_impact": "The condition may cause minor vision disturbances but is unlikely to significantly impact daily life if properly managed",
+    "financial_impact": "\u2022 Costs associated with regular eye exams, \u2022 Potential costs for corrective measures or treatments",
+    "recovery_projection": "With proper management and adherence to the treatment plan, the patient can expect to maintain vision and prevent further complications",
+    "additional_assessments": "\u2022 Comprehensive eye exam, \u2022 Visual acuity test, \u2022 Refraction assessment",
+    "compliance_notice": "It is essential to comply with the recommended treatment plan and follow-up schedule to ensure the best possible outcomes and prevent further complications."
+  }
+}

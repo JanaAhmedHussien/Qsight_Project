@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-03T02:14:11.451603"
+  },
+  "patient_info": {
+    "id": 35,
+    "name": "Test Patient",
+    "age": 45,
+    "sex": "M",
+    "bmi": 24.49,
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "left_eye": "Mild",
+    "right_eye": "Mild",
+    "confidence": 85.5,
+    "risk_score": 4.0
+  },
+  "llm_report": {
+    "condition_overview": "Diabetic retinopathy assessment for Test Patient. Diagnosis: Mild (left), Mild (right).",
+    "patient_assessment": "\u2022 45 year old M\n\u2022 BMI: 24.49\n\u2022 Insulin: 12.0\n\u2022 Risk factors present",
+    "implications": "\u2022 Requires regular monitoring\n\u2022 Potential vision complications\n\u2022 Systemic diabetic management needed",
+    "treatment_plan": "\u2022 Lifestyle: Optimize glycemic control, regular exercise\n\u2022 Monitoring: Annual retinal exams\n\u2022 Medical: As per endocrinologist\n\u2022 Follow-up: 6-12 month intervals",
+    "life_impact": "Requires ongoing monitoring and lifestyle adjustments.",
+    "financial_impact": "Costs for regular ophthalmology visits and potential treatments.",
+    "recovery_projection": "Stable with proper management. Progression varies by individual.",
+    "additional_assessments": "\u2022 Fluorescein angiography\n\u2022 Optical coherence tomography\n\u2022 Blood glucose monitoring\n\u2022 Blood pressure control",
+    "compliance_notice": "This is an AI-generated preliminary report. Consult with a qualified ophthalmologist for definitive diagnosis and treatment."
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-03T20:45:56.206013"
+  },
+  "patient_info": {
+    "id": 55,
+    "name": "Test Patient",
+    "age": 45,
+    "sex": "M",
+    "bmi": 24.49,
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "left_eye": "Mild",
+    "right_eye": "Mild",
+    "confidence": 85.5,
+    "risk_score": 4.0
+  },
+  "llm_report": {
+    "condition_overview": "Mr. Test Patient presents with a mild ophthalmic condition affecting both eyes, as indicated by a recent assessment. The diagnosis carries a high confidence level of 85.5% and a low risk score of 4.0, suggesting an early stage that warrants close monitoring rather than immediate aggressive intervention.",
+    "patient_assessment": "\u2022 45-year-old male with a BMI of 24.49, indicating normal weight status.\n\u2022 Fasting insulin level reported at 12.0.\n\u2022 Patient reports no smoking history and low alcohol consumption, favorable lifestyle factors.\n\u2022 No history of vascular disease.\n\u2022 Bilateral mild ophthalmic condition diagnosed with high confidence.",
+    "implications": "\u2022 The mild nature of the condition suggests minimal current impact on visual function, but potential for progression over time.\n\u2022 Requires diligent monitoring to detect any changes or worsening of the ocular status promptly.\n\u2022 Emphasis on maintaining overall systemic health to potentially mitigate progression.\n\u2022 Patient education on symptoms to watch for is crucial.",
+    "treatment_plan": "\u2022 Lifestyle: Continue healthy lifestyle practices including a balanced diet and regular physical activity. Ensure adequate hydration and protect eyes from environmental stressors.\n\u2022 Monitoring: Schedule routine comprehensive ophthalmic examinations to track the condition's stability or progression.\n\u2022 Medical: No specific ophthalmic medication indicated at this mild stage. Focus on optimization of general health, including blood pressure and blood sugar control if applicable, and as guided by primary care.\n\u2022 Follow-up: Recommend a follow-up ophthalmology appointment in 6-12 months, or sooner if new symptoms develop.",
+    "life_impact": "Currently, the mild bilateral ophthalmic condition is expected to have a minimal impact on Mr. Patient's daily life and activities. However, ongoing vigilance and adherence to recommended monitoring are essential to preserve long-term ocular health and visual function.",
+    "financial_impact": "Initial costs will primarily involve routine ophthalmologic consultations and any standard diagnostic tests (e.g., OCT, visual fields, fundus photography) deemed necessary for monitoring. Should the condition progress, potential future costs could include more frequent visits, specialized imaging, and possibly pharmaceutical or procedural interventions.",
+    "recovery_projection": "Given the mild presentation, the prognosis is generally favorable with appropriate monitoring and adherence to lifestyle recommendations. Stability is anticipated, though slow progression remains a possibility. Early detection and management of any changes will be key to maintaining good visual outcomes.",
+    "additional_assessments": "\u2022 Repeat comprehensive dilated fundus examination.\n\u2022 Consider Optical Coherence Tomography (OCT) of the posterior segment if specific structural changes are suspected.\n\u2022 Visual field testing to assess for peripheral vision defects, if clinically indicated.\n\u2022 Fundus photography for baseline documentation and comparison.",
+    "compliance_notice": "This report is based on the provided data and clinical impression. It does not constitute a definitive medical diagnosis or treatment plan without direct patient examination and full medical history. Consult a qualified ophthalmologist for personalized medical advice and management."
+  }
+}

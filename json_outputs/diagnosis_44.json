@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-03T12:29:22.982167"
+  },
+  "patient_info": {
+    "id": 44,
+    "name": "Test Patient",
+    "age": 45,
+    "sex": "M",
+    "bmi": 24.49,
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "left_eye": "Mild",
+    "right_eye": "Mild",
+    "confidence": 85.5,
+    "risk_score": 4.0
+  },
+  "llm_report": {
+    "condition_overview": "The patient has been diagnosed with a mild condition in both the left and right eyes, supported by an 85.5% confidence level. The associated risk score of 4.0 suggests a relatively low risk for immediate severe progression or complications, though specific interpretation of this risk score depends on the diagnostic algorithm used.",
+    "patient_assessment": "Mr. Test Patient is a 45-year-old male with a healthy BMI of 24.49 and is a non-smoker, which are favorable health indicators. However, his fasting insulin level is 12.0 mIU/L, which is slightly elevated and warrants further investigation for potential insulin resistance or pre-diabetes, as metabolic health significantly impacts ocular well-being and can be a risk factor for various eye conditions.",
+    "implications": "A 'mild' diagnosis typically indicates early-stage changes that may have minimal to no current impact on vision or daily activities. However, it signifies a need for proactive management and regular monitoring to prevent progression. The elevated insulin level, if indicative of underlying metabolic dysfunction, could be a systemic risk factor influencing the long-term ocular health and potentially contributing to the progression of eye conditions.",
+    "treatment_plan": "The primary treatment plan for a mild condition focuses on regular ophthalmological monitoring and addressing any underlying systemic risk factors. This includes scheduling follow-up examinations to track the ocular condition. Given the slightly elevated insulin levels, the patient should pursue further medical evaluation (e.g., HbA1c, fasting glucose) with their primary care physician or an endocrinologist. Lifestyle modifications such as a balanced diet, regular exercise, and weight management (if applicable) are highly recommended to improve metabolic health and potentially mitigate ocular disease progression.",
+    "life_impact": "Currently, a mild diagnosis is expected to have minimal to no significant impact on the patient's daily life, vision, or activities. However, awareness of the condition and adherence to monitoring schedules are crucial. Proactive management of both ocular and systemic health (especially the elevated insulin) is key to maintaining current visual function and preventing future impairment, ensuring long-term quality of life is not affected.",
+    "financial_impact": "Initial financial impact will primarily involve costs associated with follow-up ophthalmological appointments, potential diagnostic tests to precisely characterize the mild condition, and any consultations or tests related to managing elevated insulin and metabolic health. If the condition progresses over time due to lack of adherence or other factors, costs could increase due to potential medications, advanced diagnostic imaging, or interventional procedures.",
+    "recovery_projection": "For a 'mild' diagnosis, the focus is not on 'recovery' in the traditional sense, but rather on stabilization and prevention of progression. With diligent monitoring, adherence to lifestyle recommendations, and effective management of systemic health factors (like insulin levels), the prognosis for maintaining current vision and preventing worsening is generally good. The aim is to achieve long-term ocular stability.",
+    "additional_assessments": "Further ophthalmological assessments are recommended to precisely characterize the 'mild' condition (e.g., detailed visual acuity, dilated fundus exam, OCT, visual fields, tonometry depending on the suspected condition). Systemically, investigation into the elevated insulin levels is critical, including tests like HbA1c, fasting glucose, or an oral glucose tolerance test. A referral to a primary care physician or an endocrinologist for comprehensive metabolic assessment and management is strongly advised.",
+    "compliance_notice": "Adherence to all recommended follow-up ophthalmological appointments, prescribed lifestyle modifications, and systemic health management plans (especially regarding elevated insulin levels) is paramount. Proactive engagement in your health, including regular check-ups and following medical advice, is crucial for preventing progression of the ocular condition and preserving long-term vision and overall well-being."
+  }
+}

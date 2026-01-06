@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-03T10:40:42.683376"
+  },
+  "patient_info": {
+    "id": 37,
+    "name": "Test Patient",
+    "age": 45,
+    "sex": "M",
+    "bmi": 24.49,
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "left_eye": "Mild",
+    "right_eye": "Mild",
+    "confidence": 85.5,
+    "risk_score": 4.0
+  },
+  "llm_report": {
+    "condition_overview": "You have been diagnosed with a mild ophthalmological condition affecting both your left and right eyes. This indicates early changes that are not currently severe but warrant proactive management to maintain your ocular health and prevent potential progression.",
+    "patient_assessment": "\u2022 45-year-old male presenting with mild ophthalmological findings in both eyes. \u2022 Current health profile includes a healthy BMI (24.49), normal insulin levels (12.0), non-smoker status, and low alcohol consumption. \u2022 No history of vascular disease. \u2022 Diagnostic confidence is 85.5%, with a risk score of 4.0, indicating a generally favorable outlook with mild, early-stage changes.",
+    "implications": "\u2022 Your current mild condition typically does not significantly impair vision at this stage. \u2022 There is a potential for progression if left unmonitored or unmanaged. \u2022 Early identification allows for proactive intervention to preserve long-term ocular health. \u2022 Requires consistent monitoring to detect any changes promptly.",
+    "treatment_plan": "\u2022 Lifestyle: Maintain a balanced diet rich in antioxidants (e.g., leafy greens, fish), engage in regular physical activity, protect eyes from UV exposure with sunglasses, and take frequent breaks during screen time (20-20-20 rule). \u2022 Monitoring: Annual comprehensive ophthalmological examinations are recommended to track the condition and detect any signs of progression. \u2022 Medical: Currently, no specific medical treatments are required beyond lifestyle adjustments and vigilant monitoring. \u2022 Follow-up: Schedule your next comprehensive eye examination in 12 months, or sooner if you experience any new or worsening visual symptoms.",
+    "life_impact": "At this mild stage, the condition is expected to have minimal impact on your daily life or visual function. However, adherence to the recommended treatment plan is crucial to prevent future complications and maintain your quality of life.",
+    "financial_impact": "Anticipate costs primarily related to regular comprehensive ophthalmological examinations and potentially over-the-counter supplements if recommended. Future costs for specific treatments may arise only if the condition progresses.",
+    "recovery_projection": "With adherence to recommended lifestyle modifications and consistent monitoring, the prognosis is generally favorable. The goal is to stabilize the condition and prevent progression, preserving your current level of vision for the long term.",
+    "additional_assessments": "\u2022 Baseline retinal photography for future comparison. \u2022 Optical Coherence Tomography (OCT) to assess retinal and optic nerve structure more precisely. \u2022 Visual acuity and refraction assessment to monitor visual function. \u2022 Intraocular pressure measurement.",
+    "compliance_notice": "This report summarizes your current ophthalmological status and recommended management. It is not exhaustive and should not replace direct consultation with your ophthalmologist. Always seek professional medical advice for any health concerns or before making decisions about your treatment."
+  }
+}

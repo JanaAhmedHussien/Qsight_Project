@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-03T20:46:31.117386"
+  },
+  "patient_info": {
+    "id": 56,
+    "name": "Test Patient",
+    "age": 45,
+    "sex": "M",
+    "bmi": 24.49,
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "left_eye": "Mild",
+    "right_eye": "Mild",
+    "confidence": 85.5,
+    "risk_score": 4.0
+  },
+  "llm_report": {
+    "condition_overview": "This patient presents with mild ophthalmic changes observed in both the left and right eyes. These early findings, with a diagnosis confidence of 85.5% and a risk score of 4.0, indicate an early-stage ocular condition requiring ongoing surveillance.",
+    "patient_assessment": [
+      "45-year-old male with a BMI of 24.49, within the normal range, but warrants attention to maintain.",
+      "Insulin level of 12.0, indicating a need for metabolic health consideration in ocular assessment.",
+      "Reports no smoking history, low alcohol consumption, and no known vascular disease.",
+      "Diagnosis of mild ophthalmic changes in both the left eye (OS) and the right eye (OD).",
+      "Confidence in diagnosis: 85.5%; Current risk score: 4.0."
+    ],
+    "implications": [
+      "The mild nature of the current condition suggests minimal immediate impact on visual acuity or daily function.",
+      "Potential for slow progression over time, especially if underlying systemic risk factors are not optimally managed.",
+      "Early detection allows for proactive intervention and lifestyle modifications to potentially stabilize or slow the worsening of the ocular condition.",
+      "Requires diligent monitoring to detect any signs of advancement or developing complications."
+    ],
+    "treatment_plan": {
+      "Lifestyle": "Maintain a balanced diet rich in ocular-healthy nutrients (e.g., leafy greens, omega-3 fatty acids). Engage in regular physical activity (e.g., 30 minutes of moderate exercise most days). Ensure adequate hydration. Optimize systemic health, particularly focusing on metabolic control given the insulin levels.",
+      "Monitoring": "Comprehensive dilated eye examinations every 6-12 months, or as clinically indicated. Consider baseline imaging (e.g., fundus photography, OCT) for objective documentation and future comparison. Self-monitor for any new or worsening visual symptoms.",
+      "Medical": "Specific medical interventions are generally not required at this mild stage. Ocular lubricants may be recommended if dry eye symptoms are present. Any systemic conditions contributing to ocular health should be co-managed with the primary care physician.",
+      "Follow-up": "Return for ophthalmologic evaluation in 6 months, or sooner if any new ocular symptoms develop."
+    },
+    "life_impact": "Currently, these mild ophthalmic findings are expected to have minimal to no significant impact on the patient's daily life, vision, or functional activities. However, it necessitates increased awareness of ocular health and adherence to recommended monitoring and lifestyle adjustments to maintain stability and prevent future complications.",
+    "financial_impact": "Costs will primarily involve regular ophthalmologic examinations and potential diagnostic imaging. Depending on insurance coverage, out-of-pocket expenses may include co-pays, deductibles, and costs for any recommended over-the-counter supplements or prescribed medications. Proactive management and lifestyle changes may help reduce the need for more extensive and costly treatments in the future.",
+    "recovery_projection": "With diligent adherence to monitoring and recommended lifestyle modifications, the prognosis for maintaining stable vision and preventing significant progression of these mild ocular findings is generally favorable. There is a good chance of preventing the condition from advancing to more severe stages.",
+    "additional_assessments": [
+      "Baseline fundus photography and optical coherence tomography (OCT) for objective documentation of retinal/optic nerve status and future comparison.",
+      "Evaluation of systemic health, including a recent fasting blood glucose and HbA1c to further assess for prediabetes/diabetes given the elevated insulin levels.",
+      "Consider formal visual field testing if specific visual field deficits are suspected or if the condition is known to affect peripheral vision."
+    ],
+    "compliance_notice": "This report is based on the provided information and represents an ophthalmological assessment. It is not a substitute for professional medical advice, diagnosis, or treatment. Patients should always consult with their healthcare provider for any questions regarding a medical condition or treatment plan."
+  }
+}

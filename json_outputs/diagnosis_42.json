@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-03T12:24:03.500599"
+  },
+  "patient_info": {
+    "id": 42,
+    "name": "Test Patient",
+    "age": 45,
+    "sex": "M",
+    "bmi": 24.49,
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "left_eye": "Mild",
+    "right_eye": "Mild",
+    "confidence": 85.5,
+    "risk_score": 4.0
+  },
+  "llm_report": {
+    "condition_overview": "You have been diagnosed with mild ophthalmologic changes in both your left and right eyes. This indicates early-stage findings that require attention and ongoing management.",
+    "patient_assessment": "\u2022  45-year-old male presenting with mild bilateral ophthalmologic changes.\n\u2022  Body Mass Index (BMI) is 24.49, within the healthy range.\n\u2022  Insulin level is 12.0. This warrants further investigation for potential insulin resistance or pre-diabetic states, which can impact ocular health.\n\u2022  No history of smoking or vascular disease.\n\u2022  Low alcohol consumption.\n\u2022  Diagnosis confidence is 85.5%, with a calculated risk score of 4.0, suggesting a low to moderate risk for progression if unmanaged.",
+    "implications": "\u2022  Mild changes, while not immediately vision-threatening, indicate a need for proactive management to prevent progression.\n\u2022  Elevated insulin levels are a significant systemic factor that can contribute to ocular microvascular changes over time.\n\u2022  Close monitoring is essential to detect any worsening or new developments promptly.\n\u2022  Early intervention through lifestyle modifications can significantly mitigate future risks.",
+    "treatment_plan": "\u2022  **Lifestyle:** Strict adherence to a balanced diet, regular physical activity, and maintaining a healthy weight. Focus on dietary choices that support stable blood glucose and insulin levels.\n\u2022  **Monitoring:** Regular ophthalmologic examinations, typically every 6-12 months, or as advised. Systemic health monitoring with your primary care physician is crucial, especially regarding metabolic parameters.\n\u2022  **Medical:** Currently, no specific ocular medication is indicated for 'mild' changes. Management is primarily focused on systemic health control. Consult with your primary care physician regarding your insulin levels and potential strategies to optimize metabolic health.\n\u2022  **Follow-up:** Schedule your next ophthalmology visit in 6 months to re-evaluate your ocular status. Coordinate with your primary care physician for comprehensive metabolic assessment.",
+    "life_impact": "Currently, these mild changes are unlikely to affect your daily vision or activities. However, unaddressed underlying systemic factors, such as elevated insulin, could lead to progressive ocular issues over time. Proactive management now is key to preserving your long-term vision and quality of life.",
+    "financial_impact": "Costs will primarily involve regular ophthalmologic follow-up examinations and potential additional systemic health tests ordered by your primary care physician. If progression occurs, more advanced treatments could incur higher costs.",
+    "recovery_projection": "With diligent adherence to lifestyle recommendations and close systemic health management, the current mild ocular changes can likely remain stable. However, without intervention, there is a risk of progression to more significant conditions. Our goal is to maintain stability and prevent further deterioration.",
+    "additional_assessments": "\u2022  Hemoglobin A1c (HbA1c) to assess long-term blood glucose control.\n\u2022  Fasting blood glucose and lipid panel.\n\u2022  Consultation with your primary care physician or an endocrinologist for comprehensive metabolic evaluation.\n\u2022  Advanced retinal imaging (e.g., Optical Coherence Tomography) may be considered at subsequent visits if progression is suspected.",
+    "compliance_notice": "This report provides clinical information and recommendations based on current findings. It does not replace direct consultation with your healthcare providers. Adherence to prescribed treatment plans and follow-up schedules is crucial for optimal outcomes. If you experience any acute changes in vision or discomfort, seek immediate medical attention."
+  }
+}

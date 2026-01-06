@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-06T00:28:40.792176"
+  },
+  "patient_info": {
+    "id": 69,
+    "name": "Ali",
+    "age": 20,
+    "sex": "Female",
+    "bmi": 19.59,
+    "insulin": 12.0,
+    "smoker": true,
+    "alcohol": "None",
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "left_eye": "No_DR",
+    "right_eye": "Moderate",
+    "confidence": 70.32464146614075,
+    "risk_score": 5.0,
+    "left_confidence": 90.47921895980835,
+    "right_confidence": 50.170063972473145
+  },
+  "llm_report": {
+    "condition_overview": "Ali, you have been diagnosed with moderate diabetic retinopathy (DR) in your right eye, while your left eye currently shows no signs of DR. This condition occurs when high blood sugar levels damage the blood vessels in the retina, potentially leading to vision impairment if not managed effectively.",
+    "patient_assessment": "\u2022 Diagnosis of Moderate Diabetic Retinopathy, Right Eye; No Diabetic Retinopathy, Left Eye.\n\u2022 A young, 20-year-old female, highlighting the early onset of diabetes-related complications.\n\u2022 Identified risk factor: Current smoker.\n\u2022 BMI of 19.59, within the normal range.\n\u2022 Insulin level of 12.0, indicating the need for careful diabetes management and glycemic control.",
+    "implications": "\u2022 Potential for progression of diabetic retinopathy, which can lead to severe vision loss or blindness if left untreated.\n\u2022 Increased risk of developing diabetic macular edema (DME), affecting central vision.\n\u2022 Your current smoking status significantly exacerbates the risk of DR progression and overall systemic health complications.\n\u2022 Requires rigorous management of blood sugar levels, blood pressure, and lipids to prevent further retinal damage.",
+    "treatment_plan": "\u2022 Lifestyle:\n    \u2022 Immediate and strict smoking cessation is paramount to slow disease progression and improve overall health.\n    \u2022 Adopt a balanced, low-glycemic diet under the guidance of a dietitian to maintain stable blood glucose levels.\n    \u2022 Engage in regular, moderate exercise as recommended by your primary care physician to aid glucose control.\n\u2022 Monitoring:\n    \u2022 Close collaboration with your endocrinologist or primary care physician for optimal blood glucose (HbA1c) control, aiming for individualized targets.\n    \u2022 Regular blood pressure monitoring and management to target levels.\n    \u2022 Lipid profile monitoring and management.\n\u2022 Medical:\n    \u2022 No specific ophthalmic medical treatment is typically required at the moderate DR stage unless macular edema is present; focus is on systemic disease control.\n    \u2022 Your primary care physician or endocrinologist will guide your diabetes medication regimen.\n\u2022 Follow-up:\n    \u2022 Comprehensive ophthalmic examination every 6 months, or sooner if any visual changes are noted.",
+    "life_impact": "This diagnosis necessitates a proactive and consistent approach to your diabetes management and overall health. Adhering to lifestyle changes and medical recommendations is crucial to prevent vision loss and maintain your quality of life, which may initially require significant adjustment to daily routines.",
+    "financial_impact": "\u2022 Regular ophthalmic examinations, including potential imaging tests, will incur costs.\n\u2022 Costs associated with ongoing diabetes management, including medications, blood glucose monitoring supplies, and specialist consultations (e.g., endocrinologist, dietitian).\n\u2022 Potential future costs for advanced ophthalmic treatments (e.g., anti-VEGF injections, laser photocoagulation) if the condition progresses.",
+    "recovery_projection": "With stringent control of your blood sugar, blood pressure, and cholesterol, alongside complete smoking cessation, the prognosis for stabilizing your diabetic retinopathy and preserving your vision is good. Early detection at the moderate stage allows for timely interventions focused on prevention of progression. Non-adherence to recommendations carries a high risk of disease worsening and potential irreversible vision loss.",
+    "additional_assessments": "\u2022 Referral to an endocrinologist for comprehensive diabetes management and optimization of glycemic control.\n\u2022 Optical Coherence Tomography (OCT) of the macula to screen for early signs of diabetic macular edema (DME).\n\u2022 Comprehensive metabolic panel and HbA1c to assess current glycemic control.\n\u2022 Lipid profile and blood pressure assessment for systemic risk factor management.",
+    "compliance_notice": "This report provides general guidance based on your current assessment. It is crucial to strictly follow all medical advice, attend scheduled appointments, and actively communicate any concerns or changes in your vision or health to your healthcare providers. This information should not replace direct consultation with your ophthalmologist or primary care physician."
+  }
+}

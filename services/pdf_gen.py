@@ -1,7 +1,8 @@
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, ListFlowable, ListItem
+# services/pdf_gen.py
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.pagesizes import letter
-from reportlab.lib.enums import TA_LEFT
+from reportlab.lib.enums import TA_JUSTIFY
 from datetime import datetime
 import config
 
@@ -10,64 +11,63 @@ class PDFGen:
     def create(self, patient, diag, llm):
         path = config.Config.REPORTS / f"report_{patient.id}.pdf"
         
+        # Get base stylesheet
         styles = getSampleStyleSheet()
         
-        # ---- Custom styles ----
-        styles.add(ParagraphStyle(
-            name="Meta",
+        # Create custom styles
+        body_style = ParagraphStyle(
+            "CustomBody",
+            parent=styles["Normal"],
+            fontSize=10,
+            leading=14,
+            spaceAfter=6,
+            alignment=TA_JUSTIFY
+        )
+        
+        bullet_style = ParagraphStyle(
+            "CustomBullet",
+            parent=styles["Normal"],
+            fontSize=10,
+            leading=13,
+            leftIndent=15,
+            spaceAfter=3
+        )
+        
+        meta_style = ParagraphStyle(
+            "CustomMeta",
+            parent=styles["Normal"],
             fontSize=9,
             textColor="#555555",
             spaceAfter=12
-        ))
+        )
         
-        styles.add(ParagraphStyle(
-            name="SectionHeader",
+        section_header_style = ParagraphStyle(
+            "CustomSectionHeader",
+            parent=styles["Heading2"],
             fontSize=14,
             spaceBefore=20,
             spaceAfter=8,
-            fontName="Helvetica-Bold",
             textColor="#2C3E50"
-        ))
+        )
         
-        styles.add(ParagraphStyle(
-            name="SubHeader",
+        subheader_style = ParagraphStyle(
+            "CustomSubHeader",
+            parent=styles["Normal"],
             fontSize=11,
             spaceBefore=12,
             spaceAfter=4,
-            fontName="Helvetica-Bold",
-            textColor="#34495E"
-        ))
+            textColor="#34495E",
+            fontName="Helvetica-Bold"
+        )
         
-        styles.add(ParagraphStyle(
-            name="Body",
-            fontSize=10,
-            leading=14,
-            spaceAfter=6
-        ))
-        
-        styles.add(ParagraphStyle(
-            name="BulletItem",
-            fontSize=10,
-            leading=13,
-            leftIndent=10,
-            spaceAfter=3,
-            bulletIndent=5
-        ))
-        
-        styles.add(ParagraphStyle(
-            name="CompactBody",
-            fontSize=10,
-            leading=12,
-            spaceAfter=4
-        ))
-        
-        styles.add(ParagraphStyle(
-            name="ItalicNote",
+        italic_note_style = ParagraphStyle(
+            "CustomItalicNote",
+            parent=styles["Normal"],
             fontSize=9,
             leading=13,
             textColor="#444444",
             fontName="Helvetica-Oblique"
-        ))
+        )
         
         # Create document
         doc = SimpleDocTemplate(
@@ -79,85 +79,136 @@ class PDFGen:
             bottomMargin=40
         )
         
-        c = llm  # shorthand
         content = []
         
-        # ---- Title ----
-        content.append(Paragraph("Diabetic Retinal Diagnosis Report", styles["Title"]))
+        # Title
+        content.append(Paragraph("QSight - Diabetic Retinal Diagnosis Report", styles["Title"]))
         content.append(Paragraph(
             f"Generated on {datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')}",
-            styles["Meta"]
+            meta_style
         ))
         content.append(Spacer(1, 15))
         
-        # ---- Patient Info ----
-        content.append(Paragraph("Patient Information", styles["SectionHeader"]))
-        content.extend(self._kv_table(styles, {
+        # Patient Info
+        content.append(Paragraph("Patient Information", section_header_style))
+        content.extend(self._kv_table(body_style, {
             "Name": patient.name,
             "Age": f"{patient.age}",
             "Sex": patient.sex,
             "Weight": f"{patient.weight} kg",
             "Height": f"{patient.height} cm",
-            "BMI": f"{patient.bmi:.2f}",
+            "BMI": f"{patient.bmi:.2f}" if patient.bmi else "N/A",
             "Insulin": f"{patient.insulin}",
-            "Smoker": patient.smoker,
+            "Smoker": "Yes" if patient.smoker else "No",
             "Alcohol": patient.alcohol,
-            "Vascular Disease": patient.vascular
+            "Vascular Disease": "Yes" if patient.vascular else "No"
         }))
         
-        # ---- Diagnosis ----
+        # Diagnosis
         content.append(Spacer(1, 10))
-        content.append(Paragraph("Diagnosis Findings", styles["SectionHeader"]))
-        content.extend(self._kv_table(styles, {
-            "Left Eye": diag["retinopathy_left"],
-            "Right Eye": diag["retinopathy_right"],
-            "Confidence": f"{diag['confidence']}%",
-            "Risk Score": f"{diag['risk']}"
+        content.append(Paragraph("Diagnosis Findings", section_header_style))
+        content.extend(self._kv_table(body_style, {
+            "Left Eye": diag.get("retinopathy_left", "Unknown"),
+            "Left Confidence": f"{diag.get('left_confidence', 0):.1f}%",
+            "Right Eye": diag.get("retinopathy_right", "Unknown"),
+            "Right Confidence": f"{diag.get('right_confidence', 0):.1f}%",
+            "Average Confidence": f"{diag.get('confidence', 0):.1f}%",
+            "Risk Score": f"{diag.get('risk', 0):.1f}/10"
         }))
         
-        # ---- LLM Sections ----
-        content.extend(self._section("Condition Overview", c["condition_overview"], styles))
-        content.extend(self._section("Patient Assessment", c["patient_assessment"], styles))
-        content.extend(self._section("Clinical Implications", c["implications"], styles))
-        content.extend(self._section("Treatment Plan", c["treatment_plan"], styles))
-        content.extend(self._section("Life Impact", c["life_impact"], styles))
-        content.extend(self._section("Financial Considerations", c["financial_impact"], styles))
-        content.extend(self._section("Recovery Projection", c["recovery_projection"], styles))
-        content.extend(self._section("Recommended Additional Assessments", c["additional_assessments"], styles))
+        # LLM Sections
+        sections = [
+            ("Condition Overview", "condition_overview"),
+            ("Patient Assessment", "patient_assessment"),
+            ("Clinical Implications", "implications"),
+            ("Treatment Plan", "treatment_plan"),
+            ("Life Impact", "life_impact"),
+            ("Financial Impact", "financial_impact"),
+            ("Recovery Projection", "recovery_projection"),
+            ("Additional Assessments", "additional_assessments"),
+        ]
         
-        # ---- Compliance ----
-        content.append(Paragraph("Important Notice", styles["SectionHeader"]))
-        content.append(Paragraph(c["compliance_notice"], styles["ItalicNote"]))
+        for title, key in sections:
+            if key in llm and llm[key]:
+                content.append(Paragraph(title, section_header_style))
+                content.extend(self._format_content(llm[key], body_style, bullet_style))
+                content.append(Spacer(1, 10))
+        
+        # Compliance Notice
+        if "compliance_notice" in llm and llm["compliance_notice"]:
+            content.append(Paragraph("Important Notice", section_header_style))
+            content.append(Paragraph(llm["compliance_notice"], italic_note_style))
+        
+        # Footer
+        content.append(Spacer(1, 20))
+        content.append(Paragraph(
+            "This report is generated by QSight AI System. For clinical decisions, consult with healthcare professionals.",
+            italic_note_style
+        ))
         
         doc.build(content)
         return str(path)
     
-    # ---------- Enhanced Helpers ----------
+    def _format_content(self, content, body_style, bullet_style):
+        """Format content with proper bullet handling"""
+        elements = []
+        
+        if isinstance(content, str):
+            # Clean up the content
+            content = content.strip()
+            
+            # Split by bullet points
+            if '•' in content:
+                parts = content.split('•')
+                for part in parts:
+                    part = part.strip()
+                    if part:
+                        # Check if it's a sub-header
+                        if ':' in part and len(part) < 100:
+                            elements.append(Paragraph(f"<b>{part}</b>", body_style))
+                        else:
+                            elements.append(Paragraph(f"• {part}", bullet_style))
+            else:
+                # No bullets, return as regular paragraph
+                elements.append(Paragraph(content, body_style))
+        
+        elif isinstance(content, list):
+            # Handle list content
+            for item in content:
+                if isinstance(item, dict):
+                    for k, v in item.items():
+                        elements.append(Paragraph(f"<b>{k}:</b> {v}", body_style))
+                else:
+                    elements.append(Paragraph(f"• {item}", bullet_style))
+        else:
+            elements.append(Paragraph(str(content), body_style))
+        
+        return elements
     
-    def _kv_table(self, styles, data, columns=2):
-        """Create a better looking key-value table"""
+    def _kv_table(self, body_style, data, columns=2):
+        """Create key-value table"""
         from reportlab.platypus import Table, TableStyle
         from reportlab.lib import colors
         
         items = list(data.items())
         table_data = []
         
-        # Split items into rows based on columns
+        # Split items into rows
         for i in range(0, len(items), columns):
             row = []
             for j in range(columns):
                 if i + j < len(items):
                     k, v = items[i + j]
                     row.extend([
-                        Paragraph(f"<b>{k}:</b>", styles["Body"]),
-                        Paragraph(str(v), styles["Body"])
+                        Paragraph(f"<b>{k}:</b>", body_style),
+                        Paragraph(str(v), body_style)
                     ])
                 else:
                     row.extend(["", ""])
             table_data.append(row)
         
         # Create table
-        col_widths = [80, 120] * columns  # Adjust widths as needed
+        col_widths = [100, 120] * columns
         table = Table(table_data, colWidths=col_widths)
         
         # Style the table

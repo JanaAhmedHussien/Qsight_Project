@@ -6,6 +6,13 @@ class JSONGen:
     def create(self, patient, diag):
         path = config.Config.JSON / f"diagnosis_{patient.id}.json"
 
+        # Ensure diag has required fields
+        diag_data = diag.copy() if isinstance(diag, dict) else {}
+        
+        # Add default values for missing image fields
+        left_img = diag_data.get('left_img', 'left_eye.jpg')
+        right_img = diag_data.get('right_img', 'right_eye.jpg')
+        
         data = {
             "metadata": {
                 "system": "QSight",
@@ -18,11 +25,14 @@ class JSONGen:
                 "age": patient.age,
                 "sex": patient.sex,
                 "bmi": patient.bmi,
+                "insulin": patient.insulin,
+                "smoker": patient.smoker,
+                "alcohol": patient.alcohol,
                 "vascular_risk": patient.vascular
             },
             "image_info": {
-                "left_eye": diag["left_img"],
-                "right_eye": diag["right_img"],
+                "left_eye": left_img,
+                "right_eye": right_img,
                 "resolution": "224x224"
             },
             "model_info": {
@@ -31,14 +41,15 @@ class JSONGen:
                 "task": "Diabetic Retinopathy Classification"
             },
             "diagnosis_info": {
-                "left_eye": diag["retinopathy_left"],
-                "right_eye": diag["retinopathy_right"],
-                "confidence": diag["confidence"],
-                "risk_score": diag["risk"]
+                "left_eye": diag_data.get('retinopathy_left', 'Unknown'),
+                "right_eye": diag_data.get('retinopathy_right', 'Unknown'),
+                "confidence": diag_data.get('confidence', 0.0),
+                "risk_score": diag_data.get('risk', 0.0),
+                "left_confidence": diag_data.get('left_confidence', 0.0),
+                "right_confidence": diag_data.get('right_confidence', 0.0)
             },
-            "llm_report": diag["llm"]
-
-                    }
+            "llm_report": diag_data.get('llm', {})
+        }
 
         with open(path, "w") as f:
             json.dump(data, f, indent=2)

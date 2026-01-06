@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-06T01:06:01.152243"
+  },
+  "patient_info": {
+    "id": 74,
+    "name": "Jana",
+    "age": 45,
+    "sex": "Female",
+    "bmi": 24.49,
+    "insulin": 12.0,
+    "smoker": false,
+    "alcohol": "None",
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "left_eye": "Moderate",
+    "right_eye": "No_DR",
+    "confidence": 70.389124751091,
+    "risk_score": 3.0,
+    "left_confidence": 50.38096904754639,
+    "right_confidence": 90.39728045463562
+  },
+  "llm_report": {
+    "condition_overview": "Dear Jana, this report summarizes our findings regarding your recent eye examination. You have been diagnosed with Moderate Diabetic Retinopathy (DR) in your left eye, a complication of diabetes affecting the small blood vessels of the retina. Your right eye currently shows no signs of DR.",
+    "patient_assessment": "\u2022 Female, 45 years old, with a healthy BMI of 24.49.\n\u2022 No history of smoking, alcohol use, or vascular disease.\n\u2022 Left eye exhibits Moderate Diabetic Retinopathy, confirmed with a confidence of 70.4%.\n\u2022 Right eye shows no signs of Diabetic Retinopathy.\n\u2022 Your current risk score for DR progression is 3.0.\n\u2022 Current insulin level 12.0, indicating ongoing management or presence of diabetes.",
+    "implications": "\u2022 The presence of moderate DR in your left eye indicates that the blood vessels in your retina are being affected by your diabetes.\n\u2022 There is a risk of progression to more severe forms of DR, which could lead to vision impairment if not managed effectively.\n\u2022 While your right eye is currently unaffected, it remains at risk for developing DR in the future.\n\u2022 Strict control of your blood glucose levels, blood pressure, and lipids is crucial to prevent progression and protect your vision.",
+    "treatment_plan": "\u2022 Lifestyle: Implement strict blood glucose control through diet and exercise. Maintain healthy blood pressure and cholesterol levels as advised by your primary care physician or endocrinologist.\n\u2022 Monitoring: Regular ophthalmic examinations every 3-6 months, including dilated fundus examination and imaging, to monitor the progression of DR in your left eye and to screen your right eye.\n\u2022 Medical: Currently, no direct ocular intervention is required for moderate non-proliferative DR without macular edema. Focus remains on systemic diabetes management.\n\u2022 Follow-up: Your next ophthalmic follow-up is recommended in 3-6 months, or sooner if you experience any changes in vision.",
+    "life_impact": "Early detection of Diabetic Retinopathy allows for proactive management to preserve your vision and maintain your quality of life. Adherence to your diabetes management plan and regular eye check-ups are key to minimizing the impact of this condition on your daily activities.",
+    "financial_impact": "\u2022 Costs associated with ongoing ophthalmic examinations and diagnostic imaging.\n\u2022 Potential future expenses for ocular treatments such as laser therapy or anti-VEGF injections if the condition progresses.\n\u2022 Costs related to systemic diabetes management, including medications and primary care visits.",
+    "recovery_projection": "With diligent management of your diabetes and consistent ophthalmic follow-up, the progression of Diabetic Retinopathy can often be stabilized, and severe vision loss can frequently be prevented. While the changes in your left eye may not fully reverse, the goal is to prevent worsening and protect your remaining vision.",
+    "additional_assessments": "\u2022 Comprehensive physical examination and review of systemic health by your primary care physician or endocrinologist.\n\u2022 HbA1c testing to assess long-term blood glucose control.\n\u2022 Blood pressure and lipid panel evaluation.\n\u2022 Optical Coherence Tomography (OCT) of the macula to rule out diabetic macular edema.\n\u2022 Fundus photography for baseline documentation and future comparison.",
+    "compliance_notice": "This report is for your information and does not replace direct consultation with your healthcare provider. Please follow all medical advice, attend scheduled appointments, and do not hesitate to contact our office if you have any questions or experience any acute changes in your vision."
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-03T20:50:16.222711"
+  },
+  "patient_info": {
+    "id": 57,
+    "name": "Test Patient",
+    "age": 45,
+    "sex": "M",
+    "bmi": 24.49,
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "left_eye": "Mild",
+    "right_eye": "Mild",
+    "confidence": 85.5,
+    "risk_score": 4.0
+  },
+  "llm_report": {
+    "OphthalmologyReport": {
+      "PatientInformation": {
+        "Demographics": {
+          "Name": "Test Patient",
+          "Age": 45,
+          "Sex": "M",
+          "Weight_kg": 75.0,
+          "Height_cm": 175.0,
+          "BMI": 24.49
+        },
+        "Lifestyle": {
+          "Smoker": false,
+          "AlcoholConsumption": "Low"
+        },
+        "MedicalHistory": {
+          "InsulinLevel_mIU_L": 12.0,
+          "VascularDisease": false
+        }
+      },
+      "OphthalmologicAssessment": {
+        "Diagnosis": {
+          "LeftEye": "Mild",
+          "RightEye": "Mild"
+        },
+        "Confidence_percent": 85.5,
+        "RiskScore": 4.0,
+        "Impression": "Bilateral mild ophthalmologic findings noted, with an overall diagnostic confidence of 85.5%. The associated risk score is 4.0."
+      }
+    }
+  }
+}

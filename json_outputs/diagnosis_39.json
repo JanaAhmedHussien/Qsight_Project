@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-03T11:32:10.439523"
+  },
+  "patient_info": {
+    "id": 39,
+    "name": "Test Patient",
+    "age": 45,
+    "sex": "M",
+    "bmi": 24.49,
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "left_eye": "Mild",
+    "right_eye": "Mild",
+    "confidence": 85.5,
+    "risk_score": 4.0
+  },
+  "llm_report": {
+    "condition_overview": "This patient has been diagnosed with a mild bilateral ophthalmic condition, indicating early-stage changes in both eyes. The diagnosis confidence is 85.5%, and a risk score of 4.0 suggests a moderate likelihood of progression or future complications if not appropriately managed. This mild stage implies that visual function is likely preserved, but close monitoring is essential.",
+    "patient_assessment": "\u2022   45-year-old male presenting with a mild, bilateral ophthalmic condition.\n\u2022   Overall systemic health is good: normal BMI (24.49), non-smoker, low alcohol consumption, and no history of vascular disease.\n\u2022   Insulin level of 12.0 is within the normal range, however, ongoing metabolic health monitoring is prudent as certain ophthalmic conditions can be linked to systemic health.\n\u2022   The 'mild' severity suggests early-stage changes, which may be asymptomatic or minimally symptomatic at this time.\n\u2022   A risk score of 4.0 indicates a need for proactive management and regular monitoring to prevent potential progression.",
+    "implications": "\u2022   Mild symptoms, if present, may include occasional blurry vision, dryness, or mild discomfort, but significant visual impairment is unlikely at this stage.\n\u2022   The condition is bilateral, meaning both eyes are affected, requiring a comprehensive management approach.\n\u2022   Despite being mild, the risk score of 4.0 indicates a potential for progression, emphasizing the importance of adherence to follow-up schedules and recommended care.\n\u2022   Untreated or poorly managed progression could lead to more significant visual impairment or necessitate more intensive treatments in the future.",
+    "treatment_plan": "\u2022   Lifestyle: Maintain a balanced diet, engage in regular physical activity, ensure adequate hydration, and protect eyes from UV exposure (sunglasses). Optimize screen time and ergonomics to reduce eye strain.\n\u2022   Monitoring: Regular comprehensive ophthalmic examinations are crucial to monitor the condition's stability or progression.\n\u2022   Medical: Depending on the specific underlying mild condition, treatment may involve observation, preservative-free artificial tears (if dry eye is a component), or specific topical medications if indicated (e.g., ocular hypotensive drops if early glaucoma suspect).\n\u2022   Follow-up: Recommend a follow-up appointment in 6-12 months, or sooner if any new symptoms arise.",
+    "life_impact": "At this mild stage, the condition is expected to have minimal to no significant impact on daily activities or vision. However, awareness and adherence to the recommended monitoring and lifestyle adjustments are key to maintaining this stability and preventing future complications.",
+    "financial_impact": "Key cost considerations will include the expenses associated with regular ophthalmic examinations, potential co-pays for prescriptions (if any), and over-the-counter eye care products (e.g., artificial tears). Future costs could increase if the condition progresses and requires more intensive medical or surgical interventions.",
+    "recovery_projection": "For a mild bilateral ophthalmic condition, the prognosis is generally good with consistent monitoring and adherence to the treatment plan. The goal is to maintain stability and prevent progression. While a 'recovery' to a state of no changes may not always be possible for chronic conditions, effective management can often halt or significantly slow down disease advancement.",
+    "additional_assessments": "\u2022   Comprehensive dilated fundus examination.\n\u2022   Optical Coherence Tomography (OCT) of the retina and optic nerve head.\n\u2022   Visual field testing (if indicated by OCT or fundus exam findings).\n\u2022   Intraocular pressure (IOP) measurement.\n\u2022   Detailed anterior segment evaluation including slit lamp examination.\n\u2022   Consideration of systemic blood tests (e.g., HbA1c, fasting glucose) to further assess metabolic health, given the insulin reading.",
+    "compliance_notice": "This information is for educational purposes and should not replace direct medical advice from your ophthalmologist. Treatment plans are individualized and may be adjusted based on the specific diagnosis, progression, and patient response. Always consult with your healthcare provider regarding any medical concerns."
+  }
+}

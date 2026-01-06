@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-03T12:10:11.479385"
+  },
+  "patient_info": {
+    "id": 40,
+    "name": "Test Patient",
+    "age": 45,
+    "sex": "M",
+    "bmi": 24.49,
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "left_eye": "Mild",
+    "right_eye": "Mild",
+    "confidence": 85.5,
+    "risk_score": 4.0
+  },
+  "llm_report": {
+    "condition_overview": "Early-stage, non-specific ocular changes noted bilaterally (Left Eye: Mild, Right Eye: Mild). The diagnostic confidence is 85.5%, with a low associated risk score of 4.0.",
+    "patient_assessment": "\u2022 Patient: Test Patient, Male, 45 years old.\n\u2022 BMI: 24.49 (Normal range).\n\u2022 Insulin Level: 12.0 (Warrants further systemic evaluation).\n\u2022 Lifestyle: Non-smoker, low alcohol consumption (Positive health factors).\n\u2022 Systemic Health: No history of vascular disease.",
+    "implications": "\u2022 Mild bilateral ocular findings suggest early-stage changes, not currently impacting visual acuity or daily function.\n\u2022 The low risk score indicates a favorable immediate prognosis.\n\u2022 Elevated insulin levels, though without a formal diabetes diagnosis, suggest a need for vigilance regarding metabolic health, which can influence ocular well-being.\n\u2022 Adherence to lifestyle recommendations is crucial to prevent potential progression.",
+    "treatment_plan": "\u2022 Lifestyle: Maintain current healthy habits (non-smoker, low alcohol). Emphasize a balanced diet rich in antioxidants and omega-3 fatty acids, and regular physical activity.\n\u2022 Monitoring: Routine ophthalmic evaluations every 12-18 months, or as advised. Systemic monitoring of blood glucose, HbA1c, and lipid profile is recommended.\n\u2022 Medical: No specific ophthalmic medications are indicated at this mild stage. Management focuses on optimizing systemic health.\n\u2022 Follow-up: Schedule a follow-up ophthalmology visit as advised to reassess ocular status and discuss any changes in systemic health.",
+    "life_impact": "Currently, the mild ocular changes are not expected to cause significant impact on daily activities or vision. The focus is on proactive management and maintenance of overall health to prevent future complications.",
+    "financial_impact": "Costs will primarily involve regular ophthalmic consultations, any recommended systemic laboratory tests, and potential over-the-counter nutritional supplements. Future costs may arise if the condition progresses and requires specific interventions.",
+    "recovery_projection": "With adherence to lifestyle recommendations and regular monitoring, the prognosis for stability of the ocular condition is favorable. The aim is to prevent progression and maintain current visual health. Complete 'recovery' from mild changes may not be applicable, but rather long-term stability.",
+    "additional_assessments": "\u2022 Fasting Blood Glucose and HbA1c: To thoroughly evaluate metabolic status given the insulin level.\n\u2022 Lipid Panel: To assess cardiovascular risk factors.\n\u2022 Blood Pressure Measurement: For comprehensive cardiovascular health assessment.\n\u2022 Baseline Retinal Imaging: Fundus photography and potentially Optical Coherence Tomography (OCT) for objective documentation and future comparison.",
+    "compliance_notice": "This report provides an overview of your ocular health and recommendations. It is crucial to adhere to all advised lifestyle modifications, follow-up appointments, and systemic health monitoring. This information does not replace direct consultation with your healthcare providers. Seek immediate medical attention for any sudden changes in vision or ocular symptoms."
+  }
+}

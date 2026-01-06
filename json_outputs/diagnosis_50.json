@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-03T19:21:04.547146"
+  },
+  "patient_info": {
+    "id": 50,
+    "name": "Test Patient",
+    "age": 45,
+    "sex": "M",
+    "bmi": 24.49,
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "left_eye": "Mild",
+    "right_eye": "Mild",
+    "confidence": 85.5,
+    "risk_score": 4.0
+  },
+  "llm_report": {
+    "condition_overview": "The patient has been diagnosed with mild eye conditions in both the left and right eyes, with a confidence level of 85.5% and a risk score of 4.0. The patient's overall health, including a BMI of 24.49 and insulin level of 12.0, will be considered in the treatment plan. Regular monitoring and lifestyle adjustments are recommended to manage the condition.",
+    "patient_assessment": "\u2022 Age: 45, \u2022 Sex: Male, \u2022 Weight: 75.0 kg, \u2022 Height: 175.0 cm, \u2022 BMI: 24.49, \u2022 Insulin level: 12.0, \u2022 Non-smoker, \u2022 Low alcohol consumption, \u2022 No vascular disease",
+    "implications": "\u2022 Potential vision impairment if left untreated, \u2022 Increased risk of eye disease progression, \u2022 Importance of regular eye exams to monitor condition",
+    "treatment_plan": "\u2022 Lifestyle: Maintain a healthy diet, exercise regularly, and avoid smoking, \u2022 Monitoring: Schedule regular eye exams every 6 months, \u2022 Medical: Consider prescription eye drops or medication if condition worsens, \u2022 Follow-up: Follow-up appointment in 3 months to assess condition progression",
+    "life_impact": "The patient's daily life may be impacted by vision impairment, but with proper management and treatment, the condition can be controlled, and vision can be preserved.",
+    "financial_impact": "\u2022 Cost of regular eye exams: $100-$200 per visit, \u2022 Potential cost of medication or treatment: $50-$100 per month, \u2022 Cost of corrective lenses or surgery if necessary: $1,000-$3,000",
+    "recovery_projection": "With proper treatment and management, the patient can expect to maintain their current level of vision and prevent further deterioration of the condition.",
+    "additional_assessments": "\u2022 Comprehensive eye exam, \u2022 Visual field test, \u2022 Optical coherence tomography (OCT) scan",
+    "compliance_notice": "The patient is advised to follow the recommended treatment plan and attend all scheduled follow-up appointments to ensure the best possible outcome. The patient should also inform their healthcare provider of any changes in their condition or concerns."
+  }
+}

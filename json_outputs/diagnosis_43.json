@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-03T12:28:24.551774"
+  },
+  "patient_info": {
+    "id": 43,
+    "name": "Test Patient",
+    "age": 45,
+    "sex": "M",
+    "bmi": 24.49,
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "left_eye": "Mild",
+    "right_eye": "Mild",
+    "confidence": 85.5,
+    "risk_score": 4.0
+  },
+  "llm_report": {
+    "condition_overview": "The patient has been diagnosed with a 'Mild' condition in both the Left Eye and Right Eye, indicating early-stage findings or minor ocular changes. The diagnostic confidence for this assessment is 85.5%, suggesting a high degree of certainty in the identified mild presentation. The associated risk factor is noted as 4.0, which typically implies a relatively low immediate risk of severe complications or rapid progression but warrants ongoing attention.",
+    "patient_assessment": "Test Patient is a 45-year-old male with a healthy BMI of 24.49, and is a non-smoker, which are positive health indicators. However, an insulin level of 12.0 is noted. While not necessarily indicative of diabetes on its own, an elevated insulin level can be a marker for insulin resistance or pre-diabetes, which are systemic conditions that can impact ocular health, particularly increasing the risk for conditions like diabetic retinopathy if not managed. His overall health profile suggests a patient who is generally well but with a metabolic parameter that merits further investigation in the context of eye health.",
+    "implications": "A 'Mild' diagnosis in both eyes usually means that current visual function is largely unaffected or minimally impacted. However, it signifies that there are observable changes that require attention. Without a specific condition identified, the implications can range from early age-related changes, mild dry eye, or very early signs of more progressive conditions (e.g., mild non-proliferative diabetic retinopathy, early cataract changes). The primary implication is the need for close monitoring to prevent progression and to identify the specific underlying cause. The low risk score (4.0) suggests that the immediate threat to vision or ocular health is low, but vigilance is crucial to maintain this status.",
+    "treatment_plan": "Given the 'Mild' diagnosis and the general nature of the information, the immediate treatment plan will focus on diagnostic clarity and preventive measures. This includes: 1. **Comprehensive Ophthalmological Examination**: To precisely identify the specific 'Mild' condition in each eye. 2. **Monitoring**: Regular follow-up appointments to track any changes or progression. 3. **Lifestyle Modifications**: Promotion of a healthy diet, regular exercise, and maintaining stable blood glucose levels (given the insulin parameter) to support overall and ocular health. 4. **Symptomatic Relief (if applicable)**: Depending on the specific diagnosis, supportive care such as lubricants for mild dry eye may be recommended. Specific treatments will be prescribed once a definitive diagnosis is established by an ophthalmologist.",
+    "life_impact": "The 'Mild' condition is unlikely to significantly impact Test Patient's daily life or activities at this stage. Any visual symptoms are expected to be minimal, such as occasional blurriness or mild discomfort. The main impact will be the commitment to attending follow-up appointments and adhering to any lifestyle recommendations to mitigate the risk of progression. It serves as a reminder to prioritize ocular health and overall systemic well-being, especially concerning metabolic health due to the insulin level.",
+    "financial_impact": "The initial financial impact will involve costs associated with the necessary ophthalmological consultations and comprehensive diagnostic tests to pinpoint the specific 'Mild' condition. Subsequent costs will include regular follow-up visits. If lifestyle changes are recommended, these are generally cost-effective. Should the condition progress or if specific medications/interventions become necessary after a definitive diagnosis, these would add to the overall financial burden. Insurance coverage for consultations and tests should be verified.",
+    "recovery_projection": "For a 'Mild' ocular condition, the term 'recovery' is often replaced by 'management' or 'stabilization.' The goal is generally to prevent progression, maintain current visual acuity, and manage any associated symptoms. With proper diagnosis, consistent monitoring, adherence to medical advice, and management of any underlying systemic risk factors (like elevated insulin), the prognosis for maintaining ocular health and preventing significant vision loss is generally very good. The specific recovery or management trajectory will become clearer once the exact condition is identified.",
+    "additional_assessments": "To accurately diagnose the 'Mild' condition, the following additional assessments are crucial: 1. **Comprehensive Dilated Eye Exam**: Performed by an ophthalmologist to evaluate all structures of the eye, including the retina, optic nerve, lens, and anterior segment. 2. **Specific Imaging/Testing**: Depending on the initial findings, tests such as Optical Coherence Tomography (OCT), visual field testing, fundus photography, or fluorescein angiography may be necessary. 3. **Metabolic Panel**: Given the elevated insulin, further blood tests including fasting glucose, HbA1c, and a lipid profile are highly recommended to assess for pre-diabetes, diabetes, or other metabolic syndromes that could influence eye health. 4. **Referral to Endocrinologist**: If metabolic tests confirm significant abnormalities, a referral to an endocrinologist may be warranted.",
+    "compliance_notice": "This information is generated by an AI assistant and is intended for informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Test Patient must consult with a qualified ophthalmologist for a definitive diagnosis, personalized treatment plan, and ongoing medical management of their ocular condition. Decisions regarding medical care should always be made in consultation with a healthcare professional."
+  }
+}

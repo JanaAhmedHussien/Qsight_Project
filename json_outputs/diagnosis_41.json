@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-03T12:20:47.595859"
+  },
+  "patient_info": {
+    "id": 41,
+    "name": "Test Patient",
+    "age": 45,
+    "sex": "M",
+    "bmi": 24.49,
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "left_eye": "Mild",
+    "right_eye": "Mild",
+    "confidence": 85.5,
+    "risk_score": 4.0
+  },
+  "llm_report": {
+    "condition_overview": "Comprehensive ophthalmic examination reveals mild, early stage changes in both the left and right eyes. Our confidence in this diagnosis is 85.5%, with an overall risk score of 4.0, indicating a low-to-moderate risk for rapid progression.",
+    "patient_assessment": "\u2022 Patient Name: Test Patient, Age: 45, Sex: Male.\n\u2022 Body Mass Index (BMI) is within the healthy range at 24.49 kg/m\u00b2, supporting good general health.\n\u2022 Insulin level noted at 12.0 units; further systemic evaluation may be warranted if this is outside your normal range or accompanied by other metabolic indicators.\n\u2022 No history of smoking, low alcohol consumption, and absence of vascular disease are positive health indicators.\n\u2022 Ophthalmic findings: Mild changes observed in both the right eye (OD) and left eye (OS).",
+    "implications": "\u2022 Current vision is likely stable or minimally affected; however, these early changes necessitate vigilant monitoring.\n\u2022 There is a potential for progression of these ophthalmic findings over time, which could eventually impact visual function if not managed.\n\u2022 Early identification allows for proactive management strategies to stabilize the condition and preserve vision.",
+    "treatment_plan": "\u2022 Lifestyle: Maintain current healthy lifestyle choices, including a balanced diet and regular physical activity. Ensure adequate hydration and manage any systemic health conditions proactively.\n\u2022 Monitoring: Adherence to scheduled follow-up ophthalmic examinations is crucial for tracking disease stability or progression.\n\u2022 Medical: No immediate medical intervention is typically indicated for mild, early-stage ophthalmic changes. Management focuses on risk factor modification and surveillance.\n\u2022 Follow-up: Recommended re-evaluation in 6-12 months, or sooner if new symptoms arise.",
+    "life_impact": "At this mild stage, the condition is expected to have minimal to no impact on your daily activities, work, or hobbies. Proactive management and adherence to follow-up care are key to maintaining this minimal impact long-term.",
+    "financial_impact": "Initial costs will primarily involve routine ophthalmic examinations. Future costs may arise if the condition progresses and requires specific treatments, medications, or more frequent diagnostic imaging.",
+    "recovery_projection": "For mild ophthalmic changes, the prognosis is generally favorable with consistent monitoring and adherence to lifestyle recommendations. The goal is to stabilize the condition and prevent or significantly delay progression, thereby preserving optimal visual function. Complete reversal of changes is not typically expected, but excellent long-term outcomes are achievable with proactive care.",
+    "additional_assessments": "\u2022 Dilated fundus examination to assess retinal periphery and optic nerve head more thoroughly.\n\u2022 Optical Coherence Tomography (OCT) to evaluate retinal structure for subtle changes.\n\u2022 Visual field testing if any specific functional concerns arise.\n\u2022 Referral for a comprehensive metabolic panel or endocrinology consultation if the insulin level warrants further systemic investigation.",
+    "compliance_notice": "This report is based on current findings and medical understanding. It is not exhaustive and should not replace direct medical advice from your healthcare provider. Adherence to recommended follow-up schedules and lifestyle modifications is essential. Any new or worsening symptoms should be reported immediately."
+  }
+}

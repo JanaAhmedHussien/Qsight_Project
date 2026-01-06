@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-03T20:44:03.172526"
+  },
+  "patient_info": {
+    "id": 54,
+    "name": "Test Patient",
+    "age": 45,
+    "sex": "M",
+    "bmi": 24.49,
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "left_eye": "Mild",
+    "right_eye": "Mild",
+    "confidence": 85.5,
+    "risk_score": 4.0
+  },
+  "llm_report": {
+    "condition_overview": "You have been diagnosed with mild retinopathy in both eyes, an early stage condition where the small blood vessels in the retina show minor changes. This indicates a potential impact of your underlying systemic health on your ocular circulation, but typically does not affect vision at this stage.",
+    "patient_assessment": "\u2022 Patient: Test Patient, M, 45 years old\n\u2022 BMI: 24.49 (within healthy range)\n\u2022 Medical History: Insulin use indicated (12.0), non-smoker, low alcohol intake, no vascular disease\n\u2022 Ocular Diagnosis: Mild retinopathy in both left and right eyes\n\u2022 Confidence in Diagnosis: 85.5%\n\u2022 Risk Score for Progression: 4.0",
+    "implications": "\u2022 Early stage of retinal vascular changes; current vision is likely unaffected.\n\u2022 Indicates systemic health factors, specifically diabetes, are impacting ocular health.\n\u2022 Risk of progression to more severe stages, potentially affecting vision, if not managed proactively.\n\u2022 Emphasizes the critical need for excellent glycemic control and blood pressure management.",
+    "treatment_plan": "\u2022 Lifestyle: Maintain strict glycemic control (HbA1c targets as advised by your endocrinologist), regular aerobic exercise, balanced diet low in saturated fats and refined sugars, manage blood pressure.\n\u2022 Monitoring: Comprehensive dilated eye exam every 6-12 months, or as advised, including retinal imaging (e.g., OCT, fundus photography) to track changes.\n\u2022 Medical: Collaborate closely with your primary care physician and endocrinologist for optimal systemic diabetes management. No specific ophthalmological medical treatment is typically required for mild retinopathy.\n\u2022 Follow-up: Schedule next ophthalmology appointment in 6 months for re-evaluation.",
+    "life_impact": "Currently, mild retinopathy should have minimal direct impact on your daily activities or vision. However, proactive management of your diabetes and adherence to monitoring are crucial to prevent future vision impairment and maintain quality of life.",
+    "financial_impact": "Anticipate costs primarily associated with regular ophthalmological examinations, potentially including advanced imaging tests. Future costs could increase if the condition progresses and requires more intensive treatments (e.g., laser, injections).",
+    "recovery_projection": "With excellent glycemic, blood pressure, and lipid control, the progression of mild retinopathy can often be stabilized, and in some cases, early changes may even regress. Without diligent management, there is a risk of gradual worsening over time, potentially leading to vision-threatening complications.",
+    "additional_assessments": "\u2022 Referral to/collaboration with an endocrinologist for diabetes optimization if not already fully managed.\n\u2022 Baseline Fundus Photography and Optical Coherence Tomography (OCT) for detailed retinal assessment and future comparison.\n\u2022 Regular blood work (HbA1c, lipid panel, renal function) as guided by your primary care physician/endocrinologist.",
+    "compliance_notice": "This report is based on current findings and medical understanding. Adherence to recommended treatments and follow-up schedules is essential for optimal outcomes. This information does not replace direct consultation with your healthcare provider for personalized medical advice."
+  }
+}

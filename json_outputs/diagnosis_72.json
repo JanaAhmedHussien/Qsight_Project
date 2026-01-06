@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "system": "QSight",
+    "version": "1.0",
+    "generated_at": "2026-01-06T00:54:31.473633"
+  },
+  "patient_info": {
+    "id": 72,
+    "name": "Jana",
+    "age": 21,
+    "sex": "Female",
+    "bmi": 24.49,
+    "insulin": 12.0,
+    "smoker": false,
+    "alcohol": "None",
+    "vascular_risk": false
+  },
+  "image_info": {
+    "left_eye": "left_eye.jpg",
+    "right_eye": "right_eye.jpg",
+    "resolution": "224x224"
+  },
+  "model_info": {
+    "model": "DR-CNN",
+    "framework": "PyTorch",
+    "task": "Diabetic Retinopathy Classification"
+  },
+  "diagnosis_info": {
+    "left_eye": "No_DR",
+    "right_eye": "Moderate",
+    "confidence": 70.38087546825409,
+    "risk_score": 3.0,
+    "left_confidence": 90.43646454811096,
+    "right_confidence": 50.32528638839722
+  },
+  "llm_report": {
+    "condition_overview": "Jana, you have been diagnosed with moderate diabetic retinopathy (DR) in your right eye. This condition is a complication of diabetes, where high blood sugar levels damage the blood vessels in the retina, the light-sensitive tissue at the back of your eye. Your left eye currently shows no signs of DR.",
+    "patient_assessment": "\u2022 Ms. Jana, 21-year-old female.\n\u2022 BMI 24.49, indicating a healthy weight.\n\u2022 Non-smoker and abstains from alcohol.\n\u2022 No reported history of vascular disease.\n\u2022 Diagnosis of moderate diabetic retinopathy (DR) in the right eye, with no DR detected in the left eye.\n\u2022 Your current risk assessment score is 3.0, indicating a need for close monitoring and management.",
+    "implications": "\u2022 Moderate DR in the right eye signifies that damage to the retinal blood vessels is present, increasing the risk of vision loss if left unmanaged.\n\u2022 The condition may progress to more severe forms of DR, such as proliferative DR or diabetic macular edema, which can lead to significant vision impairment.\n\u2022 While your left eye is currently unaffected, ongoing diabetes management is crucial to prevent its development or progression.\n\u2022 Regular ophthalmologic monitoring is essential to detect any changes early and intervene promptly.",
+    "treatment_plan": "\u2022 Lifestyle: Maintain rigorous control of your blood glucose levels, blood pressure, and cholesterol through diet and exercise. Continue your current healthy lifestyle, including being a non-smoker and abstaining from alcohol.\n\u2022 Monitoring: Close monitoring of your retinal health in both eyes, particularly the right eye, is paramount. This includes regular dilated eye exams and potentially additional imaging. Work closely with your primary care physician or endocrinologist to optimize systemic diabetes control.\n\u2022 Medical: At this moderate stage, direct eye treatment is typically not indicated unless diabetic macular edema (DME) or progression to proliferative DR occurs. The primary focus is on excellent systemic diabetes management to prevent progression.\n\u2022 Follow-up: A comprehensive dilated eye exam is recommended every 3-6 months, or as advised based on disease stability and systemic control.",
+    "life_impact": "While moderate DR does not typically cause immediate symptoms or vision loss, it necessitates consistent proactive management of your diabetes and regular ophthalmological visits. Adherence to your treatment plan is vital to safeguard your vision and maintain your quality of life.",
+    "financial_impact": "\u2022 Costs for regular ophthalmology appointments and diagnostic tests (e.g., OCT) may be incurred.\n\u2022 Potential future costs for specialized eye treatments such as laser therapy or injections if the condition progresses.\n\u2022 Ongoing expenses for diabetes management, including medications, blood glucose monitoring supplies, and primary care visits.",
+    "recovery_projection": "With excellent control of your diabetes and consistent follow-up, the progression of diabetic retinopathy can often be slowed or halted, preserving your current vision. However, failure to manage diabetes effectively significantly increases the risk of worsening DR and potential vision loss.",
+    "additional_assessments": "\u2022 Optical Coherence Tomography (OCT) of the macula to assess for diabetic macular edema (DME).\n\u2022 Fluorescein Angiography (FA) may be considered to evaluate retinal blood vessel leakage or non-perfusion if progression is suspected.\n\u2022 Referral to an endocrinologist for comprehensive diabetes management review and optimization of systemic control.\n\u2022 Regular blood tests including HbA1c, fasting glucose, lipid panel, and kidney function tests, as directed by your primary care physician or endocrinologist.",
+    "compliance_notice": "Adherence to your prescribed treatment plan and regular follow-up appointments is crucial for the effective management of your condition. This report provides general guidance and should not replace personalized medical advice from your healthcare team."
+  }
+}
