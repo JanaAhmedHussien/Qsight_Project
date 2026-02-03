@@ -85,7 +85,6 @@ This project is currently in the planning phase for a hackathon. We welcome:
 - Feedback on our technical approach
 - Suggestions for quantum optimization techniques
 - Ideas for clinical validation metrics
-<<<<<<< HEAD
 =======
 
 ##  **One-Click Deployment**
