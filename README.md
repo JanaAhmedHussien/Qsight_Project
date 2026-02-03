@@ -95,4 +95,3 @@ pip install -r requirements.txt
 
 # Run the application
 streamlit run streamlit_app.py
->>>>>>> e8965847b47e71bd9b0e7919d7ddc8488ad65081
